@@ -1,0 +1,5 @@
+C:\Development\playground\CommandsPreLoading\CommandsPreLoading\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\playground\CommandsPreLoading\CommandsPreLoading\bin\Debug\CommandsPreLoading.dll
+C:\Development\playground\CommandsPreLoading\CommandsPreLoading\bin\Debug\CommandsPreLoading.pdb
+C:\Development\playground\CommandsPreLoading\CommandsPreLoading\obj\Debug\CommandsPreLoading.dll
+C:\Development\playground\CommandsPreLoading\CommandsPreLoading\obj\Debug\CommandsPreLoading.pdb
