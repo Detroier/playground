@@ -11,10 +11,7 @@ namespace WebApp.Infrastructure.Container
         public static IWindsorContainer ConfigureContainer()
         {
             IWindsorContainer container = new WindsorContainer()
-                .Install(FromAssembly.This());
-
-            container.AddFacility<LoggingFacility>(f => f.LogUsing(LoggerImplementation.Log4net).WithAppConfig());
-            container.AddFacility<TypedFactoryFacility>();
+                .Install(FromAssembly.This());            
 
             return container;
         }

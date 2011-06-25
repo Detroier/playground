@@ -95,6 +95,7 @@
     <Compile Include="Infrastructure\Container\ContainerBootstrapper.cs" />
     <Compile Include="Infrastructure\Container\ContainerExtension.cs" />
     <Compile Include="Infrastructure\Container\ContainerHelper.cs" />
+    <Compile Include="Infrastructure\Container\Installers\FacilitiesInstaller.cs" />
     <Compile Include="Infrastructure\Container\Installers\ServicesInstaller.cs" />
     <Compile Include="Infrastructure\HttpModule\WindsorHttpModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
