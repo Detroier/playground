@@ -1,4 +1,5 @@
 ﻿using Castle.Windsor;
+using Castle.Windsor.Installer;
 
 namespace WebApp.Infrastructure.Container
 {
@@ -7,7 +8,7 @@ namespace WebApp.Infrastructure.Container
     /// </summary>
     public static class ContainerHelper
     {
-        private readonly static IWindsorContainer _kernel = ContainerBootstrapper.ConfigureContainer();
+        private readonly static IWindsorContainer _kernel = ConfigureContainer();
 
         public static IWindsorContainer Kernel
         {
@@ -15,6 +16,14 @@ namespace WebApp.Infrastructure.Container
             {
                 return _kernel;
             }
+        }
+
+        private static IWindsorContainer ConfigureContainer()
+        {
+            IWindsorContainer container = new WindsorContainer()
+                .Install(FromAssembly.This());
+
+            return container;
         }
     }
 }
