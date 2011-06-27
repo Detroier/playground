@@ -1,22 +1,17 @@
 ﻿using System;
-
-using Castle.Core.Logging;
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 using WebApp.Infrastructure.BaseClassesWithInjection;
-using WebApp.Services;
+using WebApp.Presenters;
 
 namespace WebApp
 {
-    public partial class _Default : InjectablePage
+    public partial class Default : InjectablePage
     {
-        public ILogger Logger { get; set; }
+        IDefaultPagePresenter _presenter;
 
-        public ITextFetchService TextFetchService { get; set; }
-
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            _TodayText.Text = TextFetchService.GetTodayText();
-            _TodayTextBroughtBy.Text = TextFetchService.GetType().ToString();
-        }
     }
 }

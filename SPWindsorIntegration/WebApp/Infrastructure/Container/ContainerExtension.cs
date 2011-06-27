@@ -33,13 +33,13 @@ namespace WebApp.Infrastructure.Container
                 return injectableProperties;
             }
 
-            var properties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance)
+            injectableProperties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance)
                 .Where(p => IsInjectableProperty(p, instance))
                 .ToList();
 
             _propertyCache = new Dictionary<Type, List<PropertyInfo>>(_propertyCache)
             {
-               {type, properties}
+               {type, injectableProperties}
             };
 
             return injectableProperties;
@@ -53,28 +53,43 @@ namespace WebApp.Infrastructure.Container
         /// <returns></returns>
         private static bool IsInjectableProperty(PropertyInfo property, object instance)
         {
-            return property.PropertyType.IsInterface &&
-                   property.GetValue(instance, null) == null &&
+            return property.PropertyType.IsInterface && //only inject interfaces
+                   property.GetValue(instance, null) == null && //only inject non-null values
                    property.PropertyType.Name != "ISite";
+            //pesky ISite from framework..this pretty much sucks and there can be more of this in real SP environment.
         }
 
         /// <summary>
-        /// Inject properties to an instance of object.
+        /// 
         /// </summary>
         /// <param name="container"></param>
         /// <param name="instance"></param>
-        public static void InjectDependencies(this IWindsorContainer container, object instance)
+        /// <returns></returns>
+        public static List<object> InjectDependencies(this IWindsorContainer container, object instance)
         {
             var properties = GetInjectableProperties(instance);
+            List<object> injectedInstances = new List<object>();
 
             foreach (var property in properties)
             {
-                var propertyValue = property.GetValue(instance, null);
-                if (propertyValue == null)
-                {
-                    var resolvedDependency = container.Resolve(property.PropertyType);
-                    property.SetValue(instance, resolvedDependency, null);
-                }
+                var resolvedDependency = container.Resolve(property.PropertyType);
+                property.SetValue(instance, resolvedDependency, null);
+                injectedInstances.Add(resolvedDependency);
+            }
+
+            return injectedInstances;
+        }
+
+        /// <summary>
+        /// Explicitly release all the injected instances.
+        /// </summary>
+        /// <param name="container"></param>
+        /// <param name="injectedInstances"></param>
+        public static void ReleaseInjectedObjects(this IWindsorContainer container, List<object> injectedInstances)
+        {
+            foreach (var injectedInstance in injectedInstances)
+            {
+                container.Release(injectedInstance);
             }
         }
     }

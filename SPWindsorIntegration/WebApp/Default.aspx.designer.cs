@@ -10,24 +10,33 @@
 namespace WebApp {
     
     
-    public partial class _Default {
+    public partial class Default {
         
         /// <summary>
-        /// _TodayText control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal _TodayText;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// _TodayTextBroughtBy control.
+        /// _repTasks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal _TodayTextBroughtBy;
+        protected global::System.Web.UI.WebControls.Repeater _repTasks;
+        
+        /// <summary>
+        /// _repPerformers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater _repPerformers;
     }
 }

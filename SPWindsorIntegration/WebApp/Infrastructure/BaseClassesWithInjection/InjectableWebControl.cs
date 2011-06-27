@@ -3,11 +3,11 @@ using WebApp.Infrastructure.Container;
 
 namespace WebApp.Infrastructure.BaseClassesWithInjection
 {
-    public class InjectablePage : System.Web.UI.Page
+    public class InjectableWebControl : System.Web.UI.Control
     {
         private List<object> _injectedInstances;
 
-        public InjectablePage()
+        public InjectableWebControl()
         {
             _injectedInstances = ContainerHelper.Kernel.InjectDependencies(this);
         }
@@ -15,6 +15,7 @@ namespace WebApp.Infrastructure.BaseClassesWithInjection
         public override void Dispose()
         {
             ContainerHelper.Kernel.ReleaseInjectedObjects(_injectedInstances);
+
             base.Dispose();
         }
     }
