@@ -92,6 +92,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Container\Installers\PresentersInstaller.cs" />
+    <Compile Include="Model\Employe.cs" />
+    <Compile Include="Model\Task.cs" />
+    <Compile Include="Presenters\DefaultPagePresenter.cs" />
     <Compile Include="Presenters\IDefaultPagePresenter.cs" />
     <Compile Include="Infrastructure\BaseClassesWithInjection\InjectablePage.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -106,7 +109,11 @@
     <Compile Include="Infrastructure\Container\Installers\ServicesInstaller.cs" />
     <Compile Include="Infrastructure\HttpModule\WindsorHttpModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\EmployeService.cs" />
+    <Compile Include="Services\IEmployeService.cs" />
     <Compile Include="Services\ITasksService.cs" />
+    <Compile Include="Services\SpecialEmployeServiceWhichDoesVerySpecialThings.cs" />
+    <Compile Include="Services\TasksService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

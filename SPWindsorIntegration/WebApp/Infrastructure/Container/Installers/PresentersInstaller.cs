@@ -1,5 +1,6 @@
 ﻿using Castle.MicroKernel.Registration;
 using WebApp.Presenters;
+using WebApp.Services;
 
 namespace WebApp.Infrastructure.Container.Installers
 {
@@ -7,10 +8,13 @@ namespace WebApp.Infrastructure.Container.Installers
     {
         public void Install(Castle.Windsor.IWindsorContainer container, Castle.MicroKernel.SubSystems.Configuration.IConfigurationStore store)
         {
-            container.Register(AllTypes.FromThisAssembly()
-                .Where(Component.IsInSameNamespaceAs<IDefaultPagePresenter>())
-                .WithService.DefaultInterface()
-                .Configure(c => c.LifeStyle.Transient));
+            //Special registration for second employe service! we ant something different than default service.
+            container.Register(Component.For<IDefaultPagePresenter>()
+                .ImplementedBy<DefaultPagePresenter>()
+                .ServiceOverrides(ServiceOverride
+                    .ForKey("employeService")
+                    .Eq("SpecialEmployeServiceWhichDoesVerySpecialThings"))
+                .LifeStyle.Transient);
         }
     }
 }

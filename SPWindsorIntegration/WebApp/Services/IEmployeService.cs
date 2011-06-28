@@ -3,8 +3,8 @@ using WebApp.Model;
 
 namespace WebApp.Services
 {
-    public interface ITasksService
+    public interface IEmployeService
     {
-        List<Task> GetRecentTasks(int count);
+        List<Employe> GetTopPerformers(int count);
     }
 }
