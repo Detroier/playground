@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="9c3fabfd-a2de-4bf0-a0bc-1f36d1962ae8" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="SharePointPlayground.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+</Solution>
