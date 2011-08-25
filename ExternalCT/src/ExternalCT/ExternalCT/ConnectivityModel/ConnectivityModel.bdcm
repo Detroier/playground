@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/windows/2007/BusinessDataCatalog" Name="ConnectivityModel">
+  <LobSystems>
+    <LobSystem Name="ConnectivityModel" Type="DotNetAssembly">
+      <LobSystemInstances>
+        <LobSystemInstance Name="ConnectivityModel" />
+      </LobSystemInstances>
+      <Entities>
+        <Entity Name="SimpleObject" Namespace="ExternalCT.ConnectivityModel" EstimatedInstanceCount="1000" Version="1.0.0.15">
+          <Properties>
+            <Property Name="Class" Type="System.String">ExternalCT.ConnectivityModel.SimpleObjectService, ConnectivityModel</Property>
+          </Properties>
+          <Identifiers>
+            <Identifier Name="Identifier1" TypeName="System.String" />
+            <!-- TODO: Change the name of the ID and if needed the TypeName of your identifier. -->
+          </Identifiers>
+          <Methods>
+            <!-- start finder method -->
+            <Method Name="ReadList">
+              <!-- TODO: Change the name of the method if needed. -->
+              <Parameters>
+                <Parameter Direction="Return" Name="returnParameter">
+                  <TypeDescriptor TypeName="System.Collections.Generic.IEnumerable`1[[ExternalCT.ConnectivityModel.SimpleObject, ConnectivityModel]]" IsCollection="true" Name="SimpleObjectList">
+                    <TypeDescriptors>
+                      <TypeDescriptor TypeName="ExternalCT.ConnectivityModel.SimpleObject, ConnectivityModel" Name="SimpleObject">
+                        <TypeDescriptors>
+                          <TypeDescriptor TypeName="System.String" IdentifierName="Identifier1" Name="Identifier1" />
+                          <TypeDescriptor TypeName="System.String" Name="Message" />
+                          <!-- TODO: Add TypeDescriptors when you add properties to Entity1. -->
+                          <TypeDescriptor Name="AnotherMessage" TypeName="System.String" /></TypeDescriptors>
+                      </TypeDescriptor>
+                    </TypeDescriptors>
+                  </TypeDescriptor>
+                </Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Type="Finder" ReturnParameterName="returnParameter" Default="true" Name="ReadList" DefaultDisplayName="Entity1 List" />
+              </MethodInstances>
+            </Method>
+            <!-- end finder method -->
+            <!-- start specific finder method -->
+            <Method Name="ReadItem">
+              <Parameters>
+                <Parameter Direction="In" Name="id">
+                  <TypeDescriptor TypeName="System.String" IdentifierName="Identifier1" Name="Identifier1" />
+                </Parameter>
+                <Parameter Direction="Return" Name="returnParameter">
+                  <TypeDescriptor TypeName="ExternalCT.ConnectivityModel.SimpleObject, ConnectivityModel" Name="SimpleObject">
+                    <TypeDescriptors>
+                      <TypeDescriptor TypeName="System.String" IdentifierName="Identifier1" Name="Identifier1" />
+                      <TypeDescriptor TypeName="System.String" Name="Message" />
+                      <!-- TODO: Add TypeDescriptors when you add properties to Entity1. -->
+                      <TypeDescriptor Name="AnotherMessage" TypeName="System.String" />
+                      </TypeDescriptors>
+                  </TypeDescriptor>
+                </Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Type="SpecificFinder" ReturnParameterName="returnParameter" Default="true" Name="ReadItem" DefaultDisplayName="Read Entity1" />
+              </MethodInstances>
+            </Method>
+            <Method Name="Create">
+              <Parameters>
+                <Parameter Name="returnSimpleObject" Direction="Return">
+                  <TypeDescriptor Name="ReturnSimpleObject" TypeName="ExternalCT.ConnectivityModel.SimpleObject, ConnectivityModel">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="Identifier1" IdentifierName="Identifier1" TypeName="System.String" />
+                      <TypeDescriptor Name="Message" TypeName="System.String" />
+                      <TypeDescriptor Name="AnotherMessage" TypeName="System.String" /></TypeDescriptors></TypeDescriptor></Parameter>
+                <Parameter Name="newSimpleObject" Direction="In">
+                  <TypeDescriptor Name="NewSimpleObject" TypeName="ExternalCT.ConnectivityModel.SimpleObject, ConnectivityModel">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="Identifier1" IdentifierName="Identifier1" TypeName="System.String" CreatorField="true" />
+                      <TypeDescriptor Name="Message" TypeName="System.String" CreatorField="true" />
+                      <TypeDescriptor Name="AnotherMessage" TypeName="System.String" CreatorField="true" /></TypeDescriptors></TypeDescriptor></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="Create" Type="Creator" ReturnParameterName="returnSimpleObject" ReturnTypeDescriptorPath="ReturnSimpleObject" />
+              </MethodInstances></Method>
+            <Method Name="Delete">
+              <Parameters>
+                <Parameter Name="identifier1" Direction="In">
+                  <TypeDescriptor Name="Identifier1" TypeName="System.String" IdentifierEntityName="SimpleObject" IdentifierEntityNamespace="ExternalCT.ConnectivityModel" IdentifierName="Identifier1" /></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="Delete" Type="Deleter" />
+              </MethodInstances></Method>
+            <Method Name="Update">
+              <Parameters>
+                <Parameter Name="simpleObject" Direction="In">
+                  <TypeDescriptor Name="SimpleObject" TypeName="ExternalCT.ConnectivityModel.SimpleObject, ConnectivityModel">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="Identifier1" IdentifierName="Identifier1" TypeName="System.String" UpdaterField="true" />
+                      <TypeDescriptor Name="Message" TypeName="System.String" UpdaterField="true" />
+                      <TypeDescriptor Name="AnotherMessage" TypeName="System.String" UpdaterField="true" /></TypeDescriptors></TypeDescriptor></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="Update" Type="Updater" />
+              </MethodInstances></Method>
+            <!-- end specific finder method -->
+          </Methods>
+        </Entity>
+      </Entities>
+    </LobSystem>
+  </LobSystems>
+</Model>

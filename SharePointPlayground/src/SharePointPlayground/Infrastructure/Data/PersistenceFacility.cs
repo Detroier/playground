@@ -17,14 +17,14 @@ namespace SharePointPlayground.Infrastructure.Data
 	{
 		protected override void Init()
 		{
-			var configuration = BuildDatabaseConfiguration();
+			//var configuration = BuildDatabaseConfiguration();
 
-			Kernel.Register(
-				Component.For<ISessionFactory>()
-					.UsingFactoryMethod(configuration.BuildSessionFactory),
-				Component.For<ISession>()
-					.UsingFactoryMethod(k => k.Resolve<ISessionFactory>().OpenSession())
-					.LifeStyle.PerWebRequest);
+			//Kernel.Register(
+			//    Component.For<ISessionFactory>()
+			//        .UsingFactoryMethod(configuration.BuildSessionFactory),
+			//    Component.For<ISession>()
+			//        .UsingFactoryMethod(k => k.Resolve<ISessionFactory>().OpenSession())
+			//        .LifeStyle.PerWebRequest);
 		}
 
 		private Configuration BuildDatabaseConfiguration()

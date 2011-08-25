@@ -1,6 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="9c3fabfd-a2de-4bf0-a0bc-1f36d1962ae8" SharePointProductVersion="14.0">
   <Assemblies>
-    <Assembly Location="SharePointPlayground.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="AutoMapper.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="Castle.Windsor.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="Castle.Core.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="Castle.Facilities.Logging.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="Castle.Services.Logging.Log4netIntegration.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="log4net.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="NHibernate.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="NHibernate.ByteCode.Castle.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="Antlr3.Runtime.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="FluentNHibernate.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="Iesi.Collections.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="Remotion.Data.Linq.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="SharePointPlayground.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="SharePointPlayground, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4f2964e4fc1c04d8" Namespace="SharePointPlayground.SPI.WebParts.LastTasksByUserWebPart" TypeName="*" />
+      </SafeControls>
+    </Assembly>
   </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="CONTROLTEMPLATES\SharePointPlayground.SPI.WebParts\LastTasksByUserWebPart\LastTasksByUserWebPartUserControl.ascx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="SharePointPlayground_SPPlaygroundWebParts\Feature.xml" />
+    <FeatureManifest Location="SharePointPlayground_SPPlayground\Feature.xml" />
+    <FeatureManifest Location="SharePointPlayground_SPPlayground UI\Feature.xml" />
+    <FeatureManifest Location="SharePointPlayground_SPPlaygroundWebTemplateDeployment\Feature.xml" />
+    <FeatureManifest Location="SharePointPlayground_WTFeatureActivation\Feature.xml" />
+    <FeatureManifest Location="SharePointPlayground_SPPlaygroundWebConfigModificator\Feature.xml" />
+  </FeatureManifests>
 </Solution>

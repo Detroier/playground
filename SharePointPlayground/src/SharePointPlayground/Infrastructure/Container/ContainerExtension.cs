@@ -33,7 +33,7 @@ namespace SharePointPlayground.Infrastructure.Container
 				return injectableProperties;
 			}
 
-			injectableProperties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance)
+			injectableProperties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.SetProperty)
 				 .Where(p => IsInjectableProperty(p, instance))
 				 .ToList();
 
@@ -53,10 +53,19 @@ namespace SharePointPlayground.Infrastructure.Container
 		/// <returns></returns>
 		private static bool IsInjectableProperty(PropertyInfo property, object instance)
 		{
-			return property.PropertyType.IsInterface && //only inject interfaces
-					 property.GetValue(instance, null) == null && //only inject non-null values
-					 property.PropertyType.Name != "ISite";
-			//pesky ISite from framework..this pretty much sucks and there can be more of this in real SP environment.
+			try
+			{
+				var result = property.PropertyType.IsInterface && //only inject interfaces
+						 property.GetValue(instance, null) == null && //only inject non-null values
+						 property.PropertyType.Name != "ISite";
+				//pesky ISite from framework..this pretty much sucks and there can be more of this in real SP environment.
+
+				return result;
+			}
+			catch
+			{
+				return false;
+			}
 		}
 
 		/// <summary>

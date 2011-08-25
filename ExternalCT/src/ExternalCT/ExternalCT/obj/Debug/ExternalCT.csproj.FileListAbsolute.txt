@@ -1,0 +1,5 @@
+D:\Home\PersonalDevel\playground\ExternalCT\src\ExternalCT\ExternalCT\bin\Debug\ExternalCT.dll
+D:\Home\PersonalDevel\playground\ExternalCT\src\ExternalCT\ExternalCT\bin\Debug\ExternalCT.pdb
+D:\Home\PersonalDevel\playground\ExternalCT\src\ExternalCT\ExternalCT\obj\Debug\ResolveAssemblyReference.cache
+D:\Home\PersonalDevel\playground\ExternalCT\src\ExternalCT\ExternalCT\obj\Debug\ExternalCT.dll
+D:\Home\PersonalDevel\playground\ExternalCT\src\ExternalCT\ExternalCT\obj\Debug\ExternalCT.pdb

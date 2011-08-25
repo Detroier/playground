@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 
 using SharePointPlayground.Infrastructure.Container;
+using Castle.Windsor;
 
 namespace SharePointPlayground.Infrastructure.BaseClassesWithInjection
 {
@@ -9,8 +10,13 @@ namespace SharePointPlayground.Infrastructure.BaseClassesWithInjection
 		private List<object> _injectedInstances;
 
 		public InjectableLayoutPageBase()
+			: this(ContainerHelper.Kernel)
 		{
-			_injectedInstances = ContainerHelper.Kernel.InjectDependencies(this);
+		}
+
+		public InjectableLayoutPageBase(IWindsorContainer kernel)
+		{
+			_injectedInstances = kernel.InjectDependencies(this);
 		}
 
 		public override void Dispose()

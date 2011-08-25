@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<minimalLanguageDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ConnectivityModel">
+  <modelRootMoniker Name="/ConnectivityModel" />
+  <nestedChildShapes>
+    <entityShape Id="f96ec3ae-c387-404a-9f57-3371d5f1f85a" absoluteBounds="0.5, 1.375, 1.5, 2.172587890625">
+      <entityMoniker name="ExternalCT.ConnectivityModel.SimpleObject" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f86571af-16bb-4ae9-a258-3d96042b9e6b" absoluteBounds="0.515, 1.7850000000000001, 1.4700000000000002, 0.44169108072916663" name="Identifiers" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="fd6b93ae-467e-42cc-afd9-c78ced67c357" absoluteBounds="0.515, 2.2366910807291669, 1.4700000000000002, 1.2108968098958333" name="Methods" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+  </nestedChildShapes>
+</minimalLanguageDiagram>

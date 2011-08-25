@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="84c16f80-5658-4dc2-8426-c1922eafeae4" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="ExternalCT.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="ExternalCT_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

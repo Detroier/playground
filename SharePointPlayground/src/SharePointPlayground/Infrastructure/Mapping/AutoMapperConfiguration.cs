@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using AutoMapper;
+using AutoMapper.Mappers;
 using Microsoft.SharePoint;
 using SharePointPlayground.Infrastructure.Mapping.Extensions;
-using SharePointPlayground.ViewModels;
-using AutoMapper.Mappers;
-using System.Collections.Generic;
 using SharePointPlayground.Infrastructure.Mapping.ObjectMappers;
+using SharePointPlayground.ViewModels;
 
 namespace SharePointPlayground.Infrastructure.Mapping
 {
@@ -32,8 +33,14 @@ namespace SharePointPlayground.Infrastructure.Mapping
 		private static void ConfigureListItem()
 		{
 			Mapper.CreateMap<SPListItem, TaskListItemViewModel>()
-					.AutoConfigureForSPItem()
-					.ForMember(x => x.GUID, opt => opt.MapFrom(item => new Guid(item["GUID"].ToString())));
+					.AutoConfigureForSPItem(); //(x => x.GUID, x => x.ID);
+			//.ForMember(x => x.GUID, opt => opt.MapFrom(item => new Guid(item["GUID"].ToString())))
+			//.ForMember(x => x.ID, opt => opt.MapFrom(item => Convert.ToInt32(item["ID"]))); 
+			//left as example how to map some more difficult types!
+
+			//this is just temporary!
+			Mapper.CreateMap<DataRow, TaskListItemViewModel>()
+					.AutoConfigureForDataRow();
 		}
 	}
 }

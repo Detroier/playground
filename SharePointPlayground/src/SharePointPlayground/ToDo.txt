@@ -1,0 +1,31 @@
+﻿1. SharePoint Solution
+	- make it deployable
+	- make it create some site structure
+	- use some webparts / webcontrols
+2. IOC
+	- make sure it is useable in SharePoint webparts / usercontrols / etc.
+	- make sure it doesn't throw exceptions all over the place
+3. NHibernate
+	- implement per-request lifestyle in SharePoint
+	- use in webpart	
+4. HttpModules
+	- use some sane approach, so we won't have to update web.config all the time
+	- maybe that injectable stuff from Windsor examples? hmmmmmm
+5. External content type
+	- how to use?
+	- create some demo
+6. ServiceFactory
+	- is it possible to create custom service factory for SharePoint?
+	- should use IOC to get its dependencies
+	- if not possible, use some workaround 
+		=> most probably extra object with same interface injected in service
+7. Automapper
+	- check why it cannot resulve data reader!
+		- some googling maybe
+8. Accesors
+	- maybe merge few accesors together?
+	- also how to approach problems like:
+		"We need to access X sites from some webpart: OnDemandSiteAccesor? Or just standard using(var site = new SPSite("urlofsite")) ?
+	- what about accesing other stuff? HttpContext, Cache, etc. ? all of them are statics, which can kill my nice app
+
+	

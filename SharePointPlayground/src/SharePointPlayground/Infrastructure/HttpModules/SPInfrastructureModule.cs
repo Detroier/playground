@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web;
+using SharePointPlayground.Infrastructure.Mapping;
 
 namespace SharePointPlayground.Infrastructure.HttpModules
 {
@@ -18,18 +19,7 @@ namespace SharePointPlayground.Infrastructure.HttpModules
 
 		public void Init(HttpApplication context)
 		{
-			if (!_hasApplicationStated)
-			{
-				lock (_syncObject)
-				{
-					if (!_hasApplicationStated)
-					{
-						DoApplicationInitialization(context);
-
-						_hasApplicationStated = true;
-					}
-				}
-			}
+			EnsureGlobalInstancesInitialized(context);
 		}
 
 		public void Dispose()
@@ -39,17 +29,33 @@ namespace SharePointPlayground.Infrastructure.HttpModules
 
 		#endregion
 
-		private void DoApplicationInitialization(HttpApplication context)
+		/// <summary>
+		/// Ensures the global instances initialized.
+		/// </summary>
+		/// <param name="context">The context.</param>
+		private void EnsureGlobalInstancesInitialized(HttpApplication context)
 		{
-			//real initialization goes here!
-			Container.ContainerHelper.InitializeHelper(context);
+			if (!_hasApplicationStated)
+			{
+				lock (_syncObject)
+				{
+					if (!_hasApplicationStated)
+					{
 
-			context.Error += new EventHandler(HandleError);
+						InitializeStatics();
+						_hasApplicationStated = true;
+					}
+				}
+			}
 		}
 
-		void HandleError(object sender, EventArgs e)
+		/// <summary>
+		/// Initializes the static instances.
+		/// </summary>
+		private static void InitializeStatics()
 		{
-			//do something about errors, possible place, where container will be called!
+			Container.ContainerHelper.InitializeHelper();
+			AutoMapperConfiguration.Configure();
 		}
 	}
 }

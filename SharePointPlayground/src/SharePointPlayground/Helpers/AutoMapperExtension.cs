@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-
+using System.Data;
 using AutoMapper;
 
 namespace SharePointPlayground.Helpers
@@ -19,6 +19,17 @@ namespace SharePointPlayground.Helpers
 		public static List<TResult> MapTo<TResult>(this IEnumerable self)
 		{
 			return (List<TResult>)Mapper.Map(self, self.GetType(), typeof(List<TResult>));
+		}
+
+		/// <summary>
+		/// Maps to.
+		/// </summary>
+		/// <typeparam name="TResult">The type of the result.</typeparam>
+		/// <param name="self">The self.</param>
+		/// <returns></returns>
+		public static List<TResult> MapTo<TResult>(this DataTable self)
+		{
+			return (List<TResult>)Mapper.Map(self.Rows, self.Rows.GetType(), typeof(List<TResult>));
 		}
 
 		/// <summary>

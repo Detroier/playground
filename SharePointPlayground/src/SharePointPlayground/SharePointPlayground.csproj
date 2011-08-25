@@ -13,6 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SandboxedSolution>False</SandboxedSolution>
+    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -75,6 +76,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\Castle.Windsor.2.5.3\dotNet35\loggingFacility\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Server, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Client, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.SharePoint.Client.ServerRuntime\14.0.0.0__71e9bce111e9429c\Microsoft.SharePoint.Client.ServerRuntime.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\..\lib\FluentNhibernate-3.1-1.2\NHibernate.dll</HintPath>
     </Reference>
@@ -88,14 +96,27 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
     <Reference Include="Microsoft.SharePoint.Security" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\SPPlaygroundWebConfigModificator\SPPlaygroundWebConfigModificator.EventReceiver.cs">
+      <DependentUpon>SPPlaygroundWebConfigModificator.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\WTFeatureActivation\WTFeatureActivation.EventReceiver.cs">
+      <DependentUpon>WTFeatureActivation.feature</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\AutoMapperExtension.cs" />
+    <Compile Include="Infrastructure\BaseClassesWithInjection\InjectableUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Infrastructure\Container\ContainerConfigurator.cs" />
+    <Compile Include="Infrastructure\Container\Installers\SPAccesorsInstaller.cs" />
     <Compile Include="Infrastructure\Mapping\AutoMapperConfiguration.cs" />
     <Compile Include="Infrastructure\BaseClassesWithInjection\InjectableLayoutPageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -108,13 +129,60 @@
     <Compile Include="Infrastructure\Data\PersistenceFacility.cs" />
     <Compile Include="Infrastructure\HttpModules\SPInfrastructureModule.cs" />
     <Compile Include="Infrastructure\Mapping\Extensions\IMappingExpressionExtension.cs" />
+    <Compile Include="Infrastructure\Mapping\Extensions\PropertyConvertRegistrators\BasePropertyConvertRegistrator.cs" />
+    <Compile Include="Infrastructure\Mapping\Extensions\PropertyConvertRegistrators\BoolPropertyConvertRegistrator.cs" />
+    <Compile Include="Infrastructure\Mapping\Extensions\PropertyConvertRegistrators\DateTimePropertyConvertRegistration.cs" />
+    <Compile Include="Infrastructure\Mapping\Extensions\PropertyConvertRegistrators\DecimalPropertyConvertRegistrator.cs" />
+    <Compile Include="Infrastructure\Mapping\Extensions\PropertyConvertRegistrators\ErrorPropertyConvertRegistrator.cs" />
+    <Compile Include="Infrastructure\Mapping\Extensions\PropertyConvertRegistrators\GuidPropertyConvertRegistrator.cs" />
+    <Compile Include="Infrastructure\Mapping\Extensions\PropertyConvertRegistrators\IntegerPropertyConvertRegistrator.cs" />
+    <Compile Include="Infrastructure\Mapping\Extensions\PropertyConvertRegistrators\IPropertyConvertRegistrator.cs" />
+    <Compile Include="Infrastructure\Mapping\Extensions\PropertyConvertRegistrators\PropertyConversionRegistrator.cs" />
+    <Compile Include="Infrastructure\Mapping\Extensions\PropertyConvertRegistrators\StringPropertyRegistrator.cs" />
     <Compile Include="Infrastructure\Mapping\ObjectMappers\SPListItemCollectionObjectMapper.cs" />
+    <Compile Include="Helpers\SharePoint\CurrentSiteAccesor.cs" />
+    <Compile Include="Helpers\SharePoint\CurrentUserAccesor.cs" />
+    <Compile Include="Helpers\SharePoint\ICurrentSiteAccesor.cs" />
+    <Compile Include="Helpers\SharePoint\ICurrentUserAccesor.cs" />
+    <Compile Include="Infrastructure\WCFServiceFactory\ServiceFactoryWithInjection.cs" />
     <Compile Include="Model\SimpleNewsItem.cs" />
-    <Compile Include="Presenters\IDummyPresenter.cs" />
+    <Compile Include="Presenters\ILastTasksByUserPresenter.cs" />
+    <Compile Include="Presenters\LastTasksByUserPresenter.cs" />
+    <Compile Include="Presenters\LastTasksByUserPresenterWithScope.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\ILastTasksByUserQuery.cs" />
+    <Compile Include="Queries\LastTasksByUserQuery.cs" />
+    <Compile Include="Queries\SP\SPQueryExecutor.cs" />
+    <Compile Include="Queries\SP\SPSiteDataQueryExecutor.cs" />
+    <Compile Include="SPI\WebParts\LastTasksByUserWebPart\LastTasksByUserWebPart.cs" />
+    <Compile Include="SPI\WebParts\LastTasksByUserWebPart\LastTasksByUserWebPartUserControl.ascx.cs">
+      <DependentUpon>LastTasksByUserWebPartUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SPI\WebParts\LastTasksByUserWebPart\LastTasksByUserWebPartUserControl.ascx.designer.cs">
+      <DependentUpon>LastTasksByUserWebPartUserControl.ascx.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\TaskListItemViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Features\SPPlaygroundWebConfigModificator\SPPlaygroundWebConfigModificator.feature">
+      <FeatureId>{2abfae7f-5c71-4887-a390-1906850234d7}</FeatureId>
+    </None>
+    <None Include="Features\WTFeatureActivation\WTFeatureActivation.feature">
+      <FeatureId>{be4bcfa7-4c44-4d4b-8800-d663db030794}</FeatureId>
+    </None>
+    <None Include="Features\SPPlaygroundWebTemplateDeployment\SPPlaygroundWebTemplateDeployment.feature">
+      <FeatureId>{a5fae7ee-3d7e-446d-a400-fac1e67f4d2f}</FeatureId>
+    </None>
+    <None Include="Features\SPPlayground UI\SPPlayground UI.feature">
+      <FeatureId>{de4b50fb-c807-4d9f-b88a-022a5a8d089e}</FeatureId>
+    </None>
+    <None Include="Features\SPPlayground\SPPlayground.feature">
+      <FeatureId>{2c3957a6-7e26-4e24-8dac-004bcb35feff}</FeatureId>
+    </None>
+    <None Include="Features\SPPlaygroundWebParts\SPPlaygroundWebParts.feature">
+      <FeatureId>{a2b7a14b-2f7b-4c7a-adab-8d45e16df479}</FeatureId>
+    </None>
     <None Include="key.snk" />
     <None Include="Package\Package.package">
       <PackageId>{9c3fabfd-a2de-4bf0-a0bc-1f36d1962ae8}</PackageId>
@@ -122,14 +190,61 @@
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
+    <None Include="SPI\CTBinding\CTBRoot\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4c8e4152-33bb-49e5-9ff5-d614fdc2aa90}</SharePointProjectItemId>
+    </None>
+    <None Include="SPI\CT\CTRoot\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{aa702835-fc40-43f8-a1ff-bfe3d9f8e2af}</SharePointProjectItemId>
+    </None>
+    <None Include="SPI\Modules\MOPageLayouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7977de64-d203-49f9-ac65-37d650474c73}</SharePointProjectItemId>
+    </None>
+    <None Include="SPI\Modules\MORoot\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dda3edec-4d90-4f2a-bf25-5fd34742acab}</SharePointProjectItemId>
+    </None>
+    <None Include="SPI\WebParts\LastTasksByUserWebPart\LastTasksByUserWebPart.webpart" />
+    <None Include="SPI\WebParts\LastTasksByUserWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c26fbe75-f73a-4610-a247-85e6299227ad}</SharePointProjectItemId>
+    </None>
+    <None Include="SPI\WebTemplates\SPPlayground\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3099c214-ec23-4042-a0a3-bb16fcb415a5}</SharePointProjectItemId>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Features\" />
-    <Folder Include="SPI\CTBinding\" />
-    <Folder Include="SPI\CT\" />
-    <Folder Include="SPI\Modules\" />
     <Folder Include="SPI\PropertyBag\" />
-    <Folder Include="SPI\WebTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\SPPlaygroundWebConfigModificator\SPPlaygroundWebConfigModificator.Template.xml">
+      <DependentUpon>SPPlaygroundWebConfigModificator.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\WTFeatureActivation\WTFeatureActivation.Template.xml">
+      <DependentUpon>WTFeatureActivation.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\SPPlaygroundWebTemplateDeployment\SPPlaygroundWebTemplateDeployment.Template.xml">
+      <DependentUpon>SPPlaygroundWebTemplateDeployment.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\SPPlayground UI\SPPlayground UI.Template.xml">
+      <DependentUpon>SPPlayground UI.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\SPPlayground\SPPlayground.Template.xml">
+      <DependentUpon>SPPlayground.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\SPPlaygroundWebParts\SPPlaygroundWebParts.Template.xml">
+      <DependentUpon>SPPlaygroundWebParts.feature</DependentUpon>
+    </Content>
+    <Content Include="SPI\CTBinding\CTBRoot\Elements.xml" />
+    <Content Include="SPI\CT\CTRoot\Elements.xml" />
+    <Content Include="SPI\Modules\MOPageLayouts\Elements.xml" />
+    <Content Include="SPI\Modules\MOPageLayouts\welcome.aspx" />
+    <Content Include="SPI\Modules\MORoot\Elements.xml" />
+    <Content Include="SPI\Modules\MORoot\default.aspx" />
+    <Content Include="SPI\WebParts\LastTasksByUserWebPart\Elements.xml" />
+    <Content Include="SPI\WebParts\LastTasksByUserWebPart\LastTasksByUserWebPartUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="SPI\WebTemplates\SPPlayground\Elements.xml" />
+    <Content Include="SPI\WebTemplates\SPPlayground\onet.xml" />
+    <Content Include="ToDo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" />

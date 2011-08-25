@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Module Name="MORoot" Path="MORoot" Url="$Resources:osrvcore,List_Pages_UrlName;">
+		<File Url="default.aspx" Type="GhostableInLibrary" Level="Draft">
+			<Property Name="Title" Value="My root title" />
+			<Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/MyRoot.aspx, $Resources:cmscore,PageLayout_WelcomeSplash_Title;" />
+			<Property Name="ContentType" Value="My Root CT" />
+		</File>
+	</Module>
+</Elements>

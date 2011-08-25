@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="892ff6a1-b614-4f22-81b4-03ad8e933c46" solutionId="892ff6a1-b614-4f22-81b4-03ad8e933c46" resetWebServer="false" name="SPWindsor" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="Castle.Windsor.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\..\lib\Castle.Windsor.2.5.3\dotNet35\Castle.Windsor.dll" />
+    <customAssembly location="Castle.Core.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\..\lib\Castle.Windsor.2.5.3\dotNet35\Castle.Core.dll" />
+    <customAssembly location="Castle.Facilities.Logging.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\..\lib\Castle.Windsor.2.5.3\dotNet35\loggingFacility\Castle.Facilities.Logging.dll" />
+    <customAssembly location="Castle.Services.Logging.Log4netIntegration.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\..\lib\Castle.Windsor.2.5.3\dotNet35\loggingFacility\Castle.Services.Logging.Log4netIntegration.dll" />
+    <customAssembly location="log4net.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\..\lib\Castle.Windsor.2.5.3\dotNet35\loggingFacility\log4net.dll" />
+  </assemblies>
+  <features>
+    <featureReference itemId="4bcd7386-ce60-494f-ab12-179104094e73" />
+    <featureReference itemId="45f2190e-0607-43fb-9b72-26e8e707cc9b" />
+  </features>
+</package>

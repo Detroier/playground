@@ -17,8 +17,6 @@ namespace SharePointPlaygroundTests
 
 			if (returnCode != 0)
 				Console.Beep();
-
-			Console.ReadKey();
 		}
 	}
 }

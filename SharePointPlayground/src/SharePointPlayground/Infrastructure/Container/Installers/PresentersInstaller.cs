@@ -1,6 +1,7 @@
 ﻿using Castle.MicroKernel.Registration;
 
 using SharePointPlayground.Presenters;
+using SharePointPlayground.Queries;
 
 namespace SharePointPlayground.Infrastructure.Container.Installers
 {
@@ -8,8 +9,22 @@ namespace SharePointPlayground.Infrastructure.Container.Installers
 	{
 		public void Install(Castle.Windsor.IWindsorContainer container, Castle.MicroKernel.SubSystems.Configuration.IConfigurationStore store)
 		{
+			container.Register(Component.For<LastTasksByUserPresenter>()
+										.Named("InnerLastTasksByUserPresenter")
+										.LifeStyle.Transient);
+
+			container.Register(Component.For<ILastTasksByUserPresenter>()
+										.ImplementedBy<LastTasksByUserPresenterWithScope>()
+										.ServiceOverrides(ServiceOverride.ForKey<ILastTasksByUserPresenter>().Eq("InnerLastTasksByUserPresenter"))
+										.LifeStyle.Transient);
+
+			//container.Register(AllTypes.FromThisAssembly()
+			//    .Where(Component.IsInSameNamespaceAs<ILastTasksByUserPresenter>())
+			//    .WithService.DefaultInterface()
+			//    .Configure(c => c.LifeStyle.Transient));
+
 			container.Register(AllTypes.FromThisAssembly()
-				.Where(Component.IsInSameNamespaceAs<IDummyPresenter>())
+				.Where(Component.IsInSameNamespaceAs<ILastTasksByUserQuery>())
 				.WithService.DefaultInterface()
 				.Configure(c => c.LifeStyle.Transient));
 		}

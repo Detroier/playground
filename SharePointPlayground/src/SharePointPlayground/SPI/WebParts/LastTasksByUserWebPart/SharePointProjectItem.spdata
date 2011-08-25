@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="LastTasksByUserWebPartUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="LastTasksByUserWebPart\" Type="ElementManifest" />
+    <ProjectItemFile Source="LastTasksByUserWebPart.webpart" Target="LastTasksByUserWebPart\" Type="ElementFile" />
+    <ProjectItemFile Source="LastTasksByUserWebPartUserControl.ascx" Target="CONTROLTEMPLATES\SharePointPlayground.SPI.WebParts\LastTasksByUserWebPart\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="SharePointPlayground.SPI.WebParts.LastTasksByUserWebPart" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

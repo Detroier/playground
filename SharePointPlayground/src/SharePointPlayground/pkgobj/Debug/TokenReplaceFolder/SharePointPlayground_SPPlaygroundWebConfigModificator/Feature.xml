@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="SharePointPlayground WebConfigModificator" Id="81bac017-3e20-4e38-b484-012ecfc48018" ReceiverAssembly="SharePointPlayground, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4f2964e4fc1c04d8" ReceiverClass="SharePointPlayground.Features.SPPlaygroundWebConfigModificator.SPPlaygroundWebConfigModificatorEventReceiver" Scope="WebApplication"></Feature>

@@ -1,0 +1,11 @@
+D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug\NUnitTest1.exe.config
+D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug\NUnitTest1.exe
+D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug\NUnitTest1.pdb
+D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug\nunit-console-runner.dll
+D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug\nunit.framework.dll
+D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug\nunit.util.dll
+D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug\nunit.core.interfaces.dll
+D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug\nunit.core.dll
+D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\obj\x86\Debug\NUnitTest1.exe
+D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\obj\x86\Debug\NUnitTest1.pdb

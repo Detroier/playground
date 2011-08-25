@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="WindsorSite" ActivateOnDefault="FALSE" Description="The site with Windsor" Id="47854725-0d00-4fd3-be0e-f88c84e92131" Scope="Farm">
+  <ElementManifests>
+    <ElementManifest Location="WindsorSite\Elements.xml" />
+    <ElementFile Location="WindsorSite\Onet.xml" />
+    <ElementFile Location="WindsorSite\default.aspx" />
+  </ElementManifests>
+</Feature>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="SharePointPlayground WebParts" ActivateOnDefault="FALSE" Id="94d439f5-ef68-457f-8cb2-ab764e39644b" Scope="Site">
+  <ElementManifests>
+    <ElementManifest Location="LastTasksByUserWebPart\Elements.xml" />
+    <ElementFile Location="LastTasksByUserWebPart\LastTasksByUserWebPart.webpart" />
+    <ElementManifest Location="SPPlayground\Elements.xml" />
+    <ElementFile Location="SPPlayground\onet.xml" />
+  </ElementManifests>
+</Feature>

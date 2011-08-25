@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="ExternalCT Feature1" Id="53c97e81-ebd1-4401-8b00-0bf745f25a27" ReceiverAssembly="Microsoft.Office.SharePoint.ClientExtensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" ReceiverClass="Microsoft.Office.SharePoint.ClientExtensions.Deployment.ImportModelReceiver" Scope="Farm">
+  <ElementManifests>
+    <ElementFile Location="ConnectivityModel\ConnectivityModel.bdcm" />
+    <ElementFile Location="BdcAssemblies\ExternalCT.dll" />
+  </ElementManifests>
+  <Properties>
+    <Property Key="ConnectivityModel" Value="BdcAssemblies\ExternalCT.dll" />
+    <Property Key="IncrementalUpdate" Value="true" />
+    <Property Key="ModelFileName" Value="ConnectivityModel\ConnectivityModel.bdcm" />
+  </Properties>
+</Feature>

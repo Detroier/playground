@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="892ff6a1-b614-4f22-81b4-03ad8e933c46" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="Castle.Windsor.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="Castle.Core.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="Castle.Facilities.Logging.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="Castle.Services.Logging.Log4netIntegration.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="log4net.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="SPWindsor.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="SPWindsor_WindsorSite\Feature.xml" />
+    <FeatureManifest Location="SPWindsor_UI\Feature.xml" />
+  </FeatureManifests>
+</Solution>

@@ -1,3 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package dslVersion="1.0.0.0" Id="9c3fabfd-a2de-4bf0-a0bc-1f36d1962ae8" solutionId="9c3fabfd-a2de-4bf0-a0bc-1f36d1962ae8" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" name="SharePointPlayground">
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="9c3fabfd-a2de-4bf0-a0bc-1f36d1962ae8" solutionId="9c3fabfd-a2de-4bf0-a0bc-1f36d1962ae8" resetWebServer="false" name="SharePointPlayground" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="AutoMapper.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\lib\Automapper-1.1\AutoMapper.dll" />
+    <customAssembly location="Castle.Windsor.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\lib\Castle.Windsor.2.5.3\dotNet35\Castle.Windsor.dll" />
+    <customAssembly location="Castle.Core.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\lib\Castle.Windsor.2.5.3\dotNet35\Castle.Core.dll" />
+    <customAssembly location="Castle.Facilities.Logging.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\lib\Castle.Windsor.2.5.3\dotNet35\loggingFacility\Castle.Facilities.Logging.dll" />
+    <customAssembly location="Castle.Services.Logging.Log4netIntegration.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\lib\Castle.Windsor.2.5.3\dotNet35\loggingFacility\Castle.Services.Logging.Log4netIntegration.dll" />
+    <customAssembly location="log4net.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\lib\Castle.Windsor.2.5.3\dotNet35\loggingFacility\log4net.dll" />
+    <customAssembly location="NHibernate.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\lib\FluentNhibernate-3.1-1.2\NHibernate.dll" />
+    <customAssembly location="NHibernate.ByteCode.Castle.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\lib\FluentNhibernate-3.1-1.2\NHibernate.ByteCode.Castle.dll" />
+    <customAssembly location="Antlr3.Runtime.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\lib\FluentNhibernate-3.1-1.2\Antlr3.Runtime.dll" />
+    <customAssembly location="FluentNHibernate.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\lib\FluentNhibernate-3.1-1.2\FluentNHibernate.dll" />
+    <customAssembly location="Iesi.Collections.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\lib\FluentNhibernate-3.1-1.2\Iesi.Collections.dll" />
+    <customAssembly location="Remotion.Data.Linq.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\lib\FluentNhibernate-3.1-1.2\Remotion.Data.Linq.dll" />
+  </assemblies>
+  <features>
+    <featureReference itemId="a2b7a14b-2f7b-4c7a-adab-8d45e16df479" />
+    <featureReference itemId="2c3957a6-7e26-4e24-8dac-004bcb35feff" />
+    <featureReference itemId="de4b50fb-c807-4d9f-b88a-022a5a8d089e" />
+    <featureReference itemId="a5fae7ee-3d7e-446d-a400-fac1e67f4d2f" />
+    <featureReference itemId="be4bcfa7-4c44-4d4b-8800-d663db030794" />
+    <featureReference itemId="2abfae7f-5c71-4887-a390-1906850234d7" />
+  </features>
 </package>

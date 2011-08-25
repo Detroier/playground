@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="UI" ActivateOnDefault="FALSE" Description="Loads UI Stuff" Id="5f7092d6-f207-4aa1-8a5e-ae58732fa499" Scope="Site">
+  <ElementManifests>
+    <ElementManifest Location="UI\Elements.xml" />
+    <ElementFile Location="UI\PageLayouts\DefaultPageLayout.aspx" />
+  </ElementManifests>
+</Feature>

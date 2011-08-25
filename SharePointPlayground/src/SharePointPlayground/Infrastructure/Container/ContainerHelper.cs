@@ -10,9 +10,7 @@ namespace SharePointPlayground.Infrastructure.Container
 	/// </summary>
 	public static class ContainerHelper
 	{
-		//private static IWindsorContainer _kernel = null;
-
-		private const string IOC_APP_ITEM_ID = "SP_WINDSOR_INSTANCE";
+		private static IWindsorContainer _kernel = null;
 
 		/// <summary>
 		/// Gets the kernel.
@@ -22,24 +20,8 @@ namespace SharePointPlayground.Infrastructure.Container
 		{
 			get
 			{
-				return HttpContext.Current.Application[IOC_APP_ITEM_ID] as IWindsorContainer;
+				return _kernel;
 			}
-		}
-
-		/// <summary>
-		/// Configures the container.
-		/// </summary>
-		/// <returns></returns>
-		private static IWindsorContainer ConfigureContainer()
-		{
-			IWindsorContainer container = new WindsorContainer()
-				 .Install(FromAssembly.This());
-
-			// This might not be smartest move ever! Maybe only allow injection on interfaces
-			// Use this, if overriding Dispose for each base class looks ugly for you
-			//container.Kernel.ReleasePolicy = new NoTrackingReleasePolicy();
-
-			return container;
 		}
 
 		/// <summary>
@@ -47,9 +29,9 @@ namespace SharePointPlayground.Infrastructure.Container
 		/// Initializes the helper.
 		/// </summary>
 		/// <param name="context">The context.</param>
-		public static void InitializeHelper(HttpApplication context)
+		public static void InitializeHelper()
 		{
-			context.Application[IOC_APP_ITEM_ID] = ConfigureContainer();
+			_kernel = ContainerConfigurator.ConfigureContainer();
 		}
 
 		/// <summary>

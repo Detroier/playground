@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project Revision="1" Title="MyRoot" ListDir="Lists" xmlns:ows="Microsoft SharePoint" UIVersion="4">
+	<Configurations>
+		<Configuration ID="-1" Name="NewWeb"/>
+
+		<Configuration ID="0" Name="My Root Site">
+
+			<SiteFeatures>
+				<!-- PublishingPrerequisites -->
+				<Feature ID="A392DA98-270B-4e85-9769-04C0FDE267AA" />
+
+				<!-- Office SharePoint Server Publishing -->
+				<Feature ID="F6924D36-2FA8-4f0b-B16D-06B7250180FA" />
+
+				<!-- SharePoint Server Standard Site Collection -->
+				<Feature ID="B21B090C-C796-4b0f-AC0F-7EF1659C20AE"/>
+
+				<!-- My UI feature -->
+				<Feature ID="02381f4c-8e84-47a3-8104-d78086279f51"/>
+			</SiteFeatures>
+
+			<WebFeatures>
+				<!-- This funny feature activates site features, because for some reason, they are not activated? -->
+				<!--<Feature ID="1f496bfb-f7fc-4821-9b40-7fcc539c9313">
+					<Properties xmlns="http://schemas.microsoft.com/sharepoint/">
+						<Property Key="UI" Value="02381f4c-8e84-47a3-8104-d78086279f51"/>
+					</Properties>
+				</Feature>-->
+
+				<!-- Publishing -->
+				<Feature ID="22A9EF51-737B-4ff2-9346-694633FE4416">
+					<Properties xmlns="http://schemas.microsoft.com/sharepoint/">
+						<Property Key="ChromeMasterUrl" Value="~SiteCollection/_catalogs/masterpage/nightandday.master"/>
+						<Property Key="WelcomePageUrl" Value="$Resources:osrvcore,List_Pages_UrlName;/default.aspx"/>
+					</Properties>
+				</Feature>
+
+				<!-- Office SharePoint Server Publishing -->
+				<Feature ID="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB" />
+
+				<!-- Page provisioning for WT => feature, that is named the same as WebTemplate itself, so SPPlayground in this case-->
+				<Feature ID="1f496bfb-f7fc-4821-9b40-7fcc539c9313" />
+
+			</WebFeatures>
+
+			<Lists>
+				<List FeatureId="00BFEA71-EC85-4903-972D-EBE475780106" Type="106" Title="Calendar" Url="$Resources:core,lists_Folder;/Calendar" />
+			</Lists>
+
+		</Configuration>
+
+	</Configurations>
+</Project>

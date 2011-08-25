@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<WebTemplate
+		   Name="SPPlayground"
+		   BaseTemplateName="CMSPUBLISHING"
+		   BaseTemplateID="39"
+		   BaseConfigurationID="0"
+		   Title="SPPlayground"
+		   Description="Root site for SPPlayground"
+		   DisplayCategory="Custom Web Templates" />
+</Elements>

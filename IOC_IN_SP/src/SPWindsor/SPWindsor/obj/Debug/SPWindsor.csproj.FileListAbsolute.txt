@@ -1,0 +1,5 @@
+D:\Home\PersonalDevel\playground\IOC_IN_SP\src\SPWindsor\SPWindsor\bin\Debug\SPWindsor.dll
+D:\Home\PersonalDevel\playground\IOC_IN_SP\src\SPWindsor\SPWindsor\bin\Debug\SPWindsor.pdb
+D:\Home\PersonalDevel\playground\IOC_IN_SP\src\SPWindsor\SPWindsor\obj\Debug\ResolveAssemblyReference.cache
+D:\Home\PersonalDevel\playground\IOC_IN_SP\src\SPWindsor\SPWindsor\obj\Debug\SPWindsor.dll
+D:\Home\PersonalDevel\playground\IOC_IN_SP\src\SPWindsor\SPWindsor\obj\Debug\SPWindsor.pdb

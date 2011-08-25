@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project Revision="1" Title="UPMROOT" ListDir="Lists" xmlns:ows="Microsoft SharePoint" UIVersion="4">
+
+	<NavBars>
+		<NavBar Name="SharePoint Top Navbar" ID="1002">
+		</NavBar>
+	</NavBars>
+	<ListTemplates>
+	</ListTemplates>
+	<DocumentTemplates>
+		<DocumentTemplate Path="STS" Name="" DisplayName="$Resources:core,doctemp_None;" Type="100" Default="FALSE" Description="$Resources:core,doctemp_None_Desc;" />
+
+		<DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Word97;" Type="101" Description="$Resources:core,doctemp_Word97_Desc;">
+			<DocumentTemplateFiles>
+				<DocumentTemplateFile Name="doctemp\word\wdtmpl.doc" TargetName="Forms/template.doc" Default="TRUE"/>
+			</DocumentTemplateFiles>
+		</DocumentTemplate>
+		<DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Excel97;" Type="103" Description="$Resources:core,doctemp_Excel97_Desc;">
+			<DocumentTemplateFiles>
+				<DocumentTemplateFile Name="doctemp\xl\xltmpl.xls" TargetName="Forms/template.xls" Default="TRUE"/>
+			</DocumentTemplateFiles>
+		</DocumentTemplate>
+		<DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Powerpoint97;" Type="104" Description="$Resources:core,doctemp_Powerpoint97_Desc;">
+			<DocumentTemplateFiles>
+				<DocumentTemplateFile Name="doctemp\ppt\pptmpl.pot" TargetName="Forms/template.pot" Default="TRUE"/>
+			</DocumentTemplateFiles>
+		</DocumentTemplate>
+		<DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Word;" Type="121" Default="TRUE" Description="$Resources:core,doctemp_Word_Desc;">
+			<DocumentTemplateFiles>
+				<DocumentTemplateFile Name="doctemp\word\wdtmpl.dotx" TargetName="Forms/template.dotx" Default="TRUE"/>
+			</DocumentTemplateFiles>
+		</DocumentTemplate>
+		<DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Excel;" Type="122" Description="$Resources:core,doctemp_Excel_Desc;">
+			<DocumentTemplateFiles>
+				<DocumentTemplateFile Name="doctemp\xl\xltmpl.xlsx" TargetName="Forms/template.xlsx" Default="TRUE"/>
+			</DocumentTemplateFiles>
+		</DocumentTemplate>
+		<DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Powerpoint;" Type="123" Description="$Resources:core,doctemp_Powerpoint_Desc;">
+			<DocumentTemplateFiles>
+				<DocumentTemplateFile Name="doctemp\ppt\pptmpl.pptx" TargetName="Forms/template.pptx" Default="TRUE"/>
+			</DocumentTemplateFiles>
+		</DocumentTemplate>
+		<DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_OneNote;" Type="111" Description="$Resources:core,doctemp_OneNote_Desc;">
+			<DocumentTemplateFiles>
+				<DocumentTemplateFile Name="doctemp\onenote\template.onepkg" TargetName="Forms/template.onepkg" Default="TRUE"/>
+			</DocumentTemplateFiles>
+		</DocumentTemplate>
+		<DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_FP;" Type="102" Description="$Resources:core,doctemp_FP_Desc;">
+			<DocumentTemplateFiles>
+				<DocumentTemplateFile Name="doctemp\fp\fptmpl.htm" TargetName="Forms/template.htm" Default="TRUE"/>
+			</DocumentTemplateFiles>
+		</DocumentTemplate>
+		<DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_BasicPage;" Type="105" Description="$Resources:core,doctemp_BasicPage_Desc;">
+			<DocumentTemplateFiles>
+				<DocumentTemplateFile Name="doctemp\blankpgs\_basicpage.htm" TargetName="Forms/_basicpage.htm" Default="TRUE"/>
+			</DocumentTemplateFiles>
+		</DocumentTemplate>
+
+		<DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_WebPartPage;" Type="106" Description="$Resources:core,doctemp_WebPartPage_Desc;">
+			<DocumentTemplateFiles>
+				<DocumentTemplateFile Name="doctemp\smartpgs\_webpartpage.htm" TargetName="Forms/_webpartpage.htm" Default="TRUE"/>
+			</DocumentTemplateFiles>
+		</DocumentTemplate>
+
+		<DocumentTemplate XMLForm="TRUE" Path="STS" DisplayName="$Resources:core,doctemp_BlankForm;" Type="1000" Default="TRUE" Description="$Resources:core,doctemp_BlankForm_Desc;">
+			<DocumentTemplateFiles>
+				<DocumentTemplateFile Name="doctemp\xmlforms\blank\template.xml" TargetName="Forms/template.xml" Default="TRUE" />
+			</DocumentTemplateFiles>
+		</DocumentTemplate>
+
+	</DocumentTemplates>
+	<Configurations>
+		<Configuration ID="-1" Name="NewWeb"/>
+		<Configuration ID="0" Name="BLANKINTERNET">
+			<SiteFeatures>
+				<!-- Workflow Features -->
+
+				<!-- Workflow Expiration -->
+				<Feature ID="C85E5759-F323-4EFB-B548-443D2216EFB5" />
+
+				<!-- DLC Workflows -->
+				<Feature ID="0AF5989A-3AEA-4519-8AB0-85D91ABE39FF" />
+
+				<!-- "A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" -->
+				<Feature ID="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" />
+
+				<Feature ID="A392DA98-270B-4e85-9769-04C0FDE267AA">
+					<!-- PublishingPrerequisites -->
+				</Feature>
+				<Feature ID="7C637B23-06C4-472d-9A9A-7C175762C5C4">
+					<!-- ViewFormPagesLockDown -->
+				</Feature>
+				<Feature ID="AEBC918D-B20F-4a11-A1DB-9ED84D79C87E">
+					<!-- PublishingResources -->
+					<Properties xmlns="http://schemas.microsoft.com/sharepoint/">
+						<Property Key="AllowRss" Value="false"/>
+						<Property Key="SimplePublishing" Value="false" />
+					</Properties>
+				</Feature>
+
+				<Feature ID="F6924D36-2FA8-4f0b-B16D-06B7250180FA">
+					<!-- Office SharePoint Server Publishing -->
+				</Feature>
+
+				<!-- SearchCenter Url feature -->
+				<Feature ID="7AC8CC56-D28E-41f5-AD04-D95109EB987A" >
+					<Properties xmlns="http://schemas.microsoft.com/sharepoint/">
+						<Property Key="SearchCenterUrl" Value="~SiteCollection/Search/" />
+					</Properties>
+				</Feature>
+
+				<Feature ID="27781fab-9d5d-4e38-a0b7-34bba5090a9f"></Feature>
+				<Feature ID="9a02fe96-cd77-460d-8766-f09496e3561b"></Feature>
+				<Feature ID="a0de804b-8d9c-4978-9588-70a3d9465f61"></Feature>
+
+				<!-- Windsor sample UI Feature -->
+				<Feature Id="5f7092d6-f207-4aa1-8a5e-ae58732fa499"></Feature>				
+			</SiteFeatures>
+			<WebFeatures>
+				<!-- Include the common WSSListTemplateFeatures used by CMS -->
+				<Feature ID="00BFEA71-DE22-43B2-A848-C05709900100" > </Feature>
+				<Feature ID="00BFEA71-E717-4E80-AA17-D0C71B360101" > </Feature>
+				<Feature ID="00BFEA71-52D4-45B3-B544-B1C71B620109" > </Feature>
+				<Feature ID="00BFEA71-A83E-497E-9BA0-7A5C597D0107" > </Feature>
+				<Feature ID="00BFEA71-4EA5-48D4-A4AD-305CF7030140" > </Feature>
+				<Feature ID="00BFEA71-F600-43F6-A895-40C0DE7B0117" > </Feature>
+				<Feature ID="22A9EF51-737B-4ff2-9346-694633FE4416">
+					<!-- Publishing -->
+					<Properties xmlns="http://schemas.microsoft.com/sharepoint/">
+						<Property Key="ChromeMasterUrl" Value="~SiteCollection/_catalogs/masterpage/UPM.master"/>
+						<Property Key="WelcomePageUrl" Value="$Resources:osrvcore,List_Pages_UrlName;/default.aspx"/>
+						<Property Key="PagesListUrl" Value=""/>
+						<Property Key="AvailableWebTemplates" Value="*-UPMTOOL#0;*-UPMTOOL#1;*-UPMTOOL#2;*-UPMTOOL#3;*-UPMTOOL#4;*-UPMTOOL#5;*-UPMTOOL#6;*-UPMTOOL#7;*-UPMTOOL#8;*-UPMREPORT#0;*-UPMREPORT#1;*-UPMREPORT#2;*-UPMREPORT#3;*-UPMREPORT#4;*-UPMREPORT#5;"/>
+						<Property Key="AvailablePageLayouts" Value=""/>
+						<Property Key="AlternateCssUrl" Value="" />
+						<Property Key="SimplePublishing" Value="false" />
+					</Properties>
+				</Feature>
+				<Feature ID="541F5F57-C847-4e16-B59A-B31E90E6F9EA">
+					<!-- Per-Web Portal Navigation Properties-->
+					<Properties xmlns="http://schemas.microsoft.com/sharepoint/">
+						<Property Key="InheritGlobalNavigation" Value="true"/>
+						<Property Key="IncludeSubSites" Value="true"/>
+						<Property Key="IncludePages" Value="false"/>
+					</Properties>
+				</Feature>
+				<Feature ID="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB">
+					<!-- Office SharePoint Server Publishing -->
+				</Feature>
+				<Feature ID="a3a38103-3a4e-4162-bb80-361db84d0a35"></Feature>
+			</WebFeatures>
+			<Modules>
+				<!--<Module Name="Images" />-->
+				<Module Name="Home" />
+			</Modules>
+		</Configuration>
+		<Configuration ID="1" Name="BLANKINTERNET">
+			<WebFeatures>
+				<!-- Include the common WSSListTemplateFeatures used by CMS -->
+				<Feature ID="00BFEA71-DE22-43B2-A848-C05709900100" > </Feature>
+				<Feature ID="00BFEA71-E717-4E80-AA17-D0C71B360101" > </Feature>
+				<Feature ID="00BFEA71-52D4-45B3-B544-B1C71B620109" > </Feature>
+				<Feature ID="00BFEA71-A83E-497E-9BA0-7A5C597D0107" > </Feature>
+				<Feature ID="00BFEA71-4EA5-48D4-A4AD-305CF7030140" > </Feature>
+				<Feature ID="00BFEA71-F600-43F6-A895-40C0DE7B0117" > </Feature>
+				<Feature ID="22A9EF51-737B-4ff2-9346-694633FE4416">
+					<!-- Publishing -->
+					<Properties xmlns="http://schemas.microsoft.com/sharepoint/">
+						<Property Key="ChromeMasterUrl" Value=""/>
+						<Property Key="WelcomePageUrl" Value="$Resources:osrvcore,List_Pages_UrlName;/default.aspx"/>
+						<Property Key="PagesListUrl" Value=""/>
+						<Property Key="AvailableWebTemplates" Value=""/>
+						<Property Key="AvailablePageLayouts" Value=""/>
+						<Property Key="AlternateCssUrl" Value="" />
+						<Property Key="SimplePublishing" Value="false" />
+					</Properties>
+				</Feature>
+				<Feature ID="541F5F57-C847-4e16-B59A-B31E90E6F9EA">
+					<!-- Per-Web Portal Navigation Properties-->
+					<Properties xmlns="http://schemas.microsoft.com/sharepoint/">
+						<Property Key="InheritGlobalNavigation" Value="true"/>
+						<Property Key="ShowSiblings" Value="true"/>
+						<Property Key="IncludeSubSites" Value="true"/>
+						<Property Key="IncludePages" Value="false"/>
+					</Properties>
+				</Feature>
+				<Feature ID="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB">
+					<!-- Office SharePoint Server Publishing -->
+				</Feature>
+			</WebFeatures>
+			<Modules>
+				<Module Name="PressRelease" />
+			</Modules>
+		</Configuration>
+		<Configuration ID="2" Name="BLANKINTERNET">
+			<WebFeatures>
+				<!-- Include the common WSSListTemplateFeatures used by CMS -->
+				<Feature ID="00BFEA71-DE22-43B2-A848-C05709900100" > </Feature>
+				<Feature ID="00BFEA71-E717-4E80-AA17-D0C71B360101" > </Feature>
+				<Feature ID="00BFEA71-52D4-45B3-B544-B1C71B620109" > </Feature>
+				<Feature ID="00BFEA71-A83E-497E-9BA0-7A5C597D0107" > </Feature>
+				<Feature ID="00BFEA71-4EA5-48D4-A4AD-305CF7030140" > </Feature>
+				<Feature ID="00BFEA71-F600-43F6-A895-40C0DE7B0117" > </Feature>
+				<Feature ID="22A9EF51-737B-4ff2-9346-694633FE4416">
+					<!-- Publishing -->
+					<Properties xmlns="http://schemas.microsoft.com/sharepoint/">
+						<Property Key="ChromeMasterUrl" Value=""/>
+						<Property Key="WelcomePageUrl" Value="$Resources:osrvcore,List_Pages_UrlName;/default.aspx"/>
+						<Property Key="PagesListUrl" Value=""/>
+						<Property Key="AvailableWebTemplates" Value=""/>
+						<Property Key="AvailablePageLayouts" Value=""/>
+						<Property Key="AlternateCssUrl" Value="" />
+						<Property Key="SimplePublishing" Value="false" />
+					</Properties>
+				</Feature>
+				<Feature ID="541F5F57-C847-4e16-B59A-B31E90E6F9EA">
+					<!-- Per-Web Portal Navigation Properties-->
+					<Properties xmlns="http://schemas.microsoft.com/sharepoint/">
+						<Property Key="InheritGlobalNavigation" Value="true"/>
+						<Property Key="ShowSiblings" Value="true"/>
+						<Property Key="IncludeSubSites" Value="true"/>
+						<Property Key="IncludePages" Value="false"/>
+					</Properties>
+				</Feature>
+				<Feature ID="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB">
+					<!-- Office SharePoint Server Publishing -->
+				</Feature>
+			</WebFeatures>
+			<Modules>
+				<Module Name="SubWebWelcome" />
+			</Modules>
+		</Configuration>
+	</Configurations>
+	<Modules>
+		<Module Name="Home" Url="$Resources:osrvcore,List_Pages_UrlName;" Path="">
+			<File Url="default.aspx" Type="GhostableInLibrary" >
+				<Property Name="Title" Value="$Resources:cmscore,IPPT_HomeWelcomePage_Title;" />
+				<Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/DefaultPageLayout.aspx, $Resources:cmscore,PageLayout_WelcomeSplash_Title;" />
+				<Property Name="ContentType" Value="$Resources:cmscore,contenttype_welcomepage_name;" />
+				<Property Name="PublishingPageImage" Value="&lt;img border=&quot;1&quot; hspace=&quot;0&quot; src=&quot;~SiteCollection/SiteCollectionImages/home.jpg&quot; vspace=&quot;0&quot; style=&quot;margin-right:-6px&quot; alt=&quot;&quot;&gt;" />
+				<Property Name="SummaryLinks" Value="&lt;div title=&quot;_schemaversion&quot; id=&quot;_3&quot;&gt; &lt;div title=&quot;_links&quot;&gt; &lt;div title=&quot;_link&quot;&gt; &lt;span title=&quot;_title&quot;&gt;$Resources:cmscore,IPPT_HelpLinks_EnableAnonymous_Text;&lt;/span&gt;   &lt;span title=&quot;_description&quot;&gt;$Resources:cmscore,IPPT_HelpLinks_EnableAnonymous_Description;&lt;/span&gt;   &lt;span title=&quot;_linkurl&quot;&gt;    &lt;a href=&quot;~SiteCollection/_layouts/setanon.aspx&quot;&gt;~SiteCollection/_layouts/setanon.aspx&lt;/a&gt;   &lt;/span&gt;   &lt;span title=&quot;_style&quot;&gt;Default&lt;/span&gt;   &lt;span title=&quot;_order&quot;&gt;1&lt;/span&gt;   &lt;span title=&quot;_begincolumn&quot;&gt;True&lt;/span&gt;  &lt;/div&gt;  &lt;div title=&quot;_link&quot;&gt;   &lt;span title=&quot;_title&quot;&gt;$Resources:cmscore,IPPT_HelpLinks_ManageNavigation_Text;&lt;/span&gt;   &lt;span title=&quot;_description&quot;&gt;$Resources:cmscore,IPPT_HelpLinks_ManageNavigation_Description;&lt;/span&gt;   &lt;span title=&quot;_linkurl&quot;&gt;    &lt;a href=&quot;~SiteCollection/_layouts/areanavigationsettings.aspx&quot;&gt;~SiteCollection/_layouts/areanavigationsettings.aspx&lt;/a&gt;   &lt;/span&gt;   &lt;span title=&quot;_style&quot;&gt;Default&lt;/span&gt;   &lt;span title=&quot;_order&quot;&gt;2&lt;/span&gt;   &lt;span title=&quot;_begincolumn&quot;&gt;False&lt;/span&gt;  &lt;/div&gt;  &lt;div title=&quot;_link&quot;&gt;   &lt;span title=&quot;_title&quot;&gt;$Resources:cmscore,IPPT_HelpLinks_GoToMasterPageGallery_Text;&lt;/span&gt;   &lt;span title=&quot;_description&quot;&gt;$Resources:cmscore,IPPT_HelpLinks_GoToMasterPageGallery_Description;&lt;/span&gt;   &lt;span title=&quot;_linkurl&quot;&gt;    &lt;a href=&quot;~SiteCollection/_catalogs/masterpage/Forms/AllItems.aspx&quot;&gt;~SiteCollection/_catalogs/masterpage/Forms/AllItems.aspx&lt;/a&gt;   &lt;/span&gt;   &lt;span title=&quot;_style&quot;&gt;Default&lt;/span&gt;   &lt;span title=&quot;_order&quot;&gt;3&lt;/span&gt;   &lt;span title=&quot;_begincolumn&quot;&gt;False&lt;/span&gt;  &lt;/div&gt;  &lt;div title=&quot;_link&quot;&gt;   &lt;span title=&quot;_title&quot;&gt;$Resources:cmscore,IPPT_HelpLinks_ManageContent_Text;&lt;/span&gt;   &lt;span title=&quot;_description&quot;&gt;$Resources:cmscore,IPPT_HelpLinks_ManageContent_Description;&lt;/span&gt;   &lt;span title=&quot;_linkurl&quot;&gt;    &lt;a href=&quot;~SiteCollection/_layouts/sitemanager.aspx&quot;&gt;~SiteCollection/_layouts/sitemanager.aspx&lt;/a&gt;   &lt;/span&gt;   &lt;span title=&quot;_style&quot;&gt;Default&lt;/span&gt;   &lt;span title=&quot;_order&quot;&gt;4&lt;/span&gt;   &lt;span title=&quot;_begincolumn&quot;&gt;False&lt;/span&gt;  &lt;/div&gt;  &lt;div title=&quot;_link&quot;&gt;   &lt;span title=&quot;_title&quot;&gt;$Resources:cmscore,IPPT_HelpLinks_SetupMLS_Text;&lt;/span&gt;   &lt;span title=&quot;_description&quot;&gt;$Resources:cmscore,IPPT_HelpLinks_SetupMLS_Description;&lt;/span&gt;   &lt;span title=&quot;_linkurl&quot;&gt;    &lt;a href=&quot;~SiteCollection/_layouts/VariationSettings.aspx&quot;&gt;~SiteCollection/_layouts/VariationSettings.aspx&lt;/a&gt;   &lt;/span&gt;   &lt;span title=&quot;_style&quot;&gt;Default&lt;/span&gt;   &lt;span title=&quot;_order&quot;&gt;5&lt;/span&gt;   &lt;span title=&quot;_begincolumn&quot;&gt;False&lt;/span&gt;  &lt;/div&gt;  &lt;div title=&quot;_link&quot;&gt; &lt;span title=&quot;_title&quot;&gt;$Resources:cmscore,IPPT_HelpLinks_AddUsers_Text;&lt;/span&gt;   &lt;span title=&quot;_description&quot;&gt;$Resources:cmscore,IPPT_HelpLinks_AddUsers_Description;&lt;/span&gt;   &lt;span title=&quot;_linkurl&quot;&gt;    &lt;a href=&quot;~SiteCollection/_layouts/groups.aspx&quot;&gt;~SiteCollection//_layouts/groups.aspx&lt;/a&gt;   &lt;/span&gt;   &lt;span title=&quot;_style&quot;&gt;Default&lt;/span&gt;   &lt;span title=&quot;_order&quot;&gt;1&lt;/span&gt;   &lt;span title=&quot;_begincolumn&quot;&gt;True&lt;/span&gt;  &lt;/div&gt; &lt;/div&gt; &lt;div title=&quot;_view&quot;&gt;  &lt;span title=&quot;_columns&quot;&gt;1&lt;/span&gt;  &lt;span title=&quot;_linkstyle&quot;&gt;&lt;/span&gt;  &lt;span title=&quot;_groupstyle&quot;&gt;&lt;/span&gt; &lt;/div&gt;&lt;/div&gt;" />				
+			</File>
+		</Module>
+		<Module Name="PressRelease" Url="$Resources:osrvcore,List_Pages_UrlName;" Path="">
+			<File Url="default.aspx" Type="GhostableInLibrary" >
+				<Property Name="Title" Value="$Resources:cmscore,IPPT_HomeWelcomePage_Title;" />
+				<Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/WelcomeLinks.aspx, $Resources:cmscore,PageLayout_WelcomeLinks_Title;" />
+				<Property Name="ContentType" Value="$Resources:cmscore,contenttype_welcomepage_name;" />
+				<Property Name="PublishingPageImage" Value="&lt;img alt=&quot;$Resources:cmscore,IPPT_PressReleaseImage_AltText;&quot; border=&quot;1&quot; hspace=&quot;0&quot; src=&quot;~SiteCollection/SiteCollectionImages/PR.gif&quot; vspace=&quot;0&quot;&gt;" />
+				<Property Name="ReusableHTML" Value="$Resources:cmscore,IPPT_PressReleaseWelcomePage_Description;" />
+			</File>
+		</Module>
+		<Module Name="SubWebWelcome" Url="$Resources:osrvcore,List_Pages_UrlName;" Path="">
+			<File Url="default.aspx" Type="GhostableInLibrary" Level="Draft" >
+				<Property Name="Title" Value="$Resources:cmscore,IPPT_HomeWelcomePage_Title;" />
+				<Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/WelcomeLinks.aspx, $Resources:cmscore,PageLayout_WelcomeLinks_Title;" />
+				<Property Name="ContentType" Value="$Resources:cmscore,contenttype_welcomepage_name;" />
+			</File>
+		</Module>
+		<Module Name="Images" Url="SiteCollectionImages" Path="" RootWebOnly="TRUE">
+			<File Url="home.gif" Name="home.jpg" Type="GhostableInLibrary">
+				<Property Name="ContentType" Value="$Resources:cmscore,contenttype_image_name;" />
+			</File>
+			<File Url="PR.gif" Type="GhostableInLibrary">
+				<Property Name="ContentType" Value="$Resources:cmscore,contenttype_image_name;" />
+			</File>
+		</Module>
+	</Modules>
+</Project>

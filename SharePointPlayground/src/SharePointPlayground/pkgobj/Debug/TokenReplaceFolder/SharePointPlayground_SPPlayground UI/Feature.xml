@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="SharePointPlayground UI" Id="02381f4c-8e84-47a3-8104-d78086279f51" Scope="Site">
+  <ElementManifests>
+    <ElementManifest Location="CTRoot\Elements.xml" />
+    <ElementManifest Location="MOPageLayouts\Elements.xml" />
+    <ElementFile Location="MOPageLayouts\welcome.aspx" />
+  </ElementManifests>
+</Feature>
