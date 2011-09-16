@@ -7,6 +7,7 @@ using Microsoft.SharePoint;
 using SharePointPlayground.Infrastructure.Mapping.Extensions;
 using SharePointPlayground.Infrastructure.Mapping.ObjectMappers;
 using SharePointPlayground.ViewModels;
+using SharePointPlayground.Model;
 
 namespace SharePointPlayground.Infrastructure.Mapping
 {
@@ -17,6 +18,13 @@ namespace SharePointPlayground.Infrastructure.Mapping
 			ConfigureMapper();
 
 			ConfigureListItem();
+
+			ConfigureModelMappings();
+		}
+
+		private static void ConfigureModelMappings()
+		{
+			Mapper.CreateMap<PostInsertViewModel, Post>();
 		}
 
 		private static void ConfigureMapper()

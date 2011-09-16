@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="SharePointPlayground.SPI.WebParts.BlogsFromDatabaseWebPart.BlogsFromDatabaseWebPart, SharePointPlayground, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4f2964e4fc1c04d8" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">BlogsFromDatabaseWebPart</property>
+        <property name="Description" type="string">My Visual WebPart</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

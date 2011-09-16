@@ -2,6 +2,7 @@
 
 using SharePointPlayground.Presenters;
 using SharePointPlayground.Queries;
+using SharePointPlayground.Commands;
 
 namespace SharePointPlayground.Infrastructure.Container.Installers
 {
@@ -18,6 +19,11 @@ namespace SharePointPlayground.Infrastructure.Container.Installers
 										.ServiceOverrides(ServiceOverride.ForKey<ILastTasksByUserPresenter>().Eq("InnerLastTasksByUserPresenter"))
 										.LifeStyle.Transient);
 
+			container.Register(AllTypes.FromThisAssembly()
+				.Where(Component.IsInSameNamespaceAs<IBlogsFromDatabasePresenter>())
+				.WithService.DefaultInterface()
+				.Configure(c => c.LifeStyle.Transient));
+
 			//container.Register(AllTypes.FromThisAssembly()
 			//    .Where(Component.IsInSameNamespaceAs<ILastTasksByUserPresenter>())
 			//    .WithService.DefaultInterface()
@@ -25,6 +31,11 @@ namespace SharePointPlayground.Infrastructure.Container.Installers
 
 			container.Register(AllTypes.FromThisAssembly()
 				.Where(Component.IsInSameNamespaceAs<ILastTasksByUserQuery>())
+				.WithService.DefaultInterface()
+				.Configure(c => c.LifeStyle.Transient));
+
+			container.Register(AllTypes.FromThisAssembly()
+				.Where(Component.IsInSameNamespaceAs<IAddPostCommand>())
 				.WithService.DefaultInterface()
 				.Configure(c => c.LifeStyle.Transient));
 		}

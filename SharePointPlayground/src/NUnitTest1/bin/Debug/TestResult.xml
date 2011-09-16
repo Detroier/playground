@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug\NUnitTest1.exe" total="3" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-08-24" time="15:35:20">
+<test-results name="D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug\NUnitTest1.exe" total="3" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-09-12" time="18:04:47">
   <environment nunit-version="2.5.10.11092" clr-version="2.0.50727.4961" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug" machine-name="WL033766" user="poladmar" user-domain="EU" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug\NUnitTest1.exe" executed="True" result="Success" success="True" time="22.702" asserts="0">
+  <test-suite type="Assembly" name="D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug\NUnitTest1.exe" executed="True" result="Success" success="True" time="11.457" asserts="0">
     <results>
-      <test-suite type="Namespace" name="NUnitTest1" executed="True" result="Success" success="True" time="22.689" asserts="0">
+      <test-suite type="Namespace" name="NUnitTest1" executed="True" result="Success" success="True" time="11.445" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Infrastructure" executed="True" result="Success" success="True" time="20.573" asserts="0">
+          <test-suite type="Namespace" name="Infrastructure" executed="True" result="Success" success="True" time="9.876" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Mapping" executed="True" result="Success" success="True" time="20.572" asserts="0">
+              <test-suite type="Namespace" name="Mapping" executed="True" result="Success" success="True" time="9.875" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="AutomapperSPItemTests" executed="True" result="Success" success="True" time="20.570" asserts="0">
+                  <test-suite type="TestFixture" name="AutomapperSPItemTests" executed="True" result="Success" success="True" time="9.873" asserts="0">
                     <results>
-                      <test-case name="NUnitTest1.Infrastructure.Mapping.AutomapperSPItemTests.Can_Map_SPListItem_To_OtherType" executed="True" result="Success" success="True" time="20.503" asserts="3" />
-                      <test-case name="NUnitTest1.Infrastructure.Mapping.AutomapperSPItemTests.Can_Map_SPListItemCollection" executed="True" result="Success" success="True" time="0.046" asserts="1" />
+                      <test-case name="NUnitTest1.Infrastructure.Mapping.AutomapperSPItemTests.Can_Map_SPListItem_To_OtherType" executed="True" result="Success" success="True" time="9.812" asserts="3" />
+                      <test-case name="NUnitTest1.Infrastructure.Mapping.AutomapperSPItemTests.Can_Map_SPListItemCollection" executed="True" result="Success" success="True" time="0.042" asserts="1" />
                     </results>
                   </test-suite>
                 </results>
               </test-suite>
             </results>
           </test-suite>
-          <test-suite type="Namespace" name="Presenters" executed="True" result="Success" success="True" time="2.111" asserts="0">
+          <test-suite type="Namespace" name="Presenters" executed="True" result="Success" success="True" time="1.565" asserts="0">
             <results>
-              <test-suite type="TestFixture" name="LastTasksByUserPresenterTests" executed="True" result="Success" success="True" time="2.111" asserts="0">
+              <test-suite type="TestFixture" name="LastTasksByUserPresenterTests" executed="True" result="Success" success="True" time="1.564" asserts="0">
                 <results>
-                  <test-case name="NUnitTest1.Presenters.LastTasksByUserPresenterTests.Can_Load_Last_Tasks_For_User" executed="True" result="Success" success="True" time="2.110" asserts="1" />
+                  <test-case name="NUnitTest1.Presenters.LastTasksByUserPresenterTests.Can_Load_Last_Tasks_For_User" executed="True" result="Success" success="True" time="1.564" asserts="1" />
                 </results>
               </test-suite>
             </results>

@@ -18,7 +18,11 @@ namespace SharePointPlayground.Infrastructure.Container.Installers
 		/// <param name="store">The configuration store.</param>
 		public void Install(Castle.Windsor.IWindsorContainer container, Castle.MicroKernel.SubSystems.Configuration.IConfigurationStore store)
 		{
-			container.AddFacility<LoggingFacility>(f => f.LogUsing(LoggerImplementation.Log4net).WithAppConfig());
+			container.AddFacility<LoggingFacility>(f =>
+					f.LogUsing(LoggerImplementation.Log4net)
+					.WithConfig("D:\\Home\\PersonalDevel\\log4net-Playground.config"));
+			//change this to something better or even use App config
+
 			container.AddFacility<TypedFactoryFacility>();
 			container.AddFacility<PersistenceFacility>();
 		}

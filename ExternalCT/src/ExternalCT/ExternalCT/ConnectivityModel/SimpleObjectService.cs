@@ -23,7 +23,8 @@ namespace ExternalCT.ConnectivityModel
 				{
 					Identifier1 = id,
 					Message = "Message_" + id,
-					AnotherMessage = "AnotherMessage_" + id
+					AnotherMessage = "AnotherMessage_" + id,
+					AndAnotherMessage = "Hello World!"
 				};
 		}
 		/// <summary>
@@ -41,7 +42,8 @@ namespace ExternalCT.ConnectivityModel
 				{
 					Identifier1 = i.ToString(),
 					Message = "Message_" + i.ToString(),
-					AnotherMessage = "AnotherMessage_" + i.ToString()
+					AnotherMessage = "AnotherMessage_" + i.ToString(),
+					AndAnotherMessage = "Hello World!"
 				});
 			}
 
@@ -62,6 +64,11 @@ namespace ExternalCT.ConnectivityModel
 		public static void Update(SimpleObject simpleObject)
 		{
 			//throw new System.NotImplementedException();
+		}
+
+		public static IEnumerable<SimpleObject> ReadList1()
+		{
+			throw new System.NotImplementedException();
 		}
 	}
 }

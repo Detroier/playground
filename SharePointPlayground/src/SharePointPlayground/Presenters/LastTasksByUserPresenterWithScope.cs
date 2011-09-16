@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Microsoft.SharePoint.Utilities;
+using SharePointPlayground.SPI.WebParts.LastTasksByUserWebPart;
 
 namespace SharePointPlayground.Presenters
 {
@@ -12,11 +13,19 @@ namespace SharePointPlayground.Presenters
 			_innerPresenter = innerPresenter;
 		}
 
-		public IEnumerable<ViewModels.TaskListItemViewModel> GetLastTasks()
+		public void InitView(ILastTasksByUserView view)
 		{
-			using (SPMonitoredScope monitoredScope = new SPMonitoredScope("LastTasksByUserPresenter -> GetTasksMethod"))
+			using (SPMonitoredScope monitoredScope = new SPMonitoredScope("LastTasksByUserPresenter -> InitView"))
 			{
-				return _innerPresenter.GetLastTasks();
+				_innerPresenter.InitView(view);
+			}
+		}
+
+		public void DeleteTaskByItemId(int itemId)
+		{
+			using (SPMonitoredScope monitoredScope = new SPMonitoredScope("LastTasksByUserPresenter -> DeleteTaskByItemId"))
+			{
+				_innerPresenter.DeleteTaskByItemId(itemId);
 			}
 		}
 	}

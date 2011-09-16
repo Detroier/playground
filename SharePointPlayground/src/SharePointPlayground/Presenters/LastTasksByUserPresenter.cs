@@ -1,6 +1,7 @@
 ﻿using Microsoft.SharePoint;
 using SharePointPlayground.Helpers.SharePoint;
 using SharePointPlayground.Queries;
+using SharePointPlayground.SPI.WebParts.LastTasksByUserWebPart;
 
 namespace SharePointPlayground.Presenters
 {
@@ -17,9 +18,16 @@ namespace SharePointPlayground.Presenters
 			_userToSearch = currentUserAccesor.GetUser();
 		}
 
-		public System.Collections.Generic.IEnumerable<ViewModels.TaskListItemViewModel> GetLastTasks()
+		public void InitView(ILastTasksByUserView view)
 		{
-			return _query.GetLastTasksForUser(_siteToSearch, _userToSearch, 5);
+			var taskList = _query.GetLastTasksForUser(_siteToSearch, _userToSearch, 5);
+
+			view.Tasks = taskList;
+		}
+
+		public void DeleteTaskByItemId(int itemId)
+		{
+			//now..delete will need something more than Item ID! => we will also need list etc => s..lets select it and be done, then find site.List.Item => and delete it
 		}
 	}
 }

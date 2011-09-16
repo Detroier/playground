@@ -6,7 +6,7 @@
         <LobSystemInstance Name="ConnectivityModel" />
       </LobSystemInstances>
       <Entities>
-        <Entity Name="SimpleObject" Namespace="ExternalCT.ConnectivityModel" EstimatedInstanceCount="1000" Version="1.0.0.15">
+        <Entity Name="SimpleObject" Namespace="ExternalCT.ConnectivityModel" EstimatedInstanceCount="1000" Version="1.0.0.25">
           <Properties>
             <Property Name="Class" Type="System.String">ExternalCT.ConnectivityModel.SimpleObjectService, ConnectivityModel</Property>
           </Properties>
@@ -27,7 +27,8 @@
                           <TypeDescriptor TypeName="System.String" IdentifierName="Identifier1" Name="Identifier1" />
                           <TypeDescriptor TypeName="System.String" Name="Message" />
                           <!-- TODO: Add TypeDescriptors when you add properties to Entity1. -->
-                          <TypeDescriptor Name="AnotherMessage" TypeName="System.String" /></TypeDescriptors>
+                          <TypeDescriptor Name="AnotherMessage" TypeName="System.String" />
+                          <TypeDescriptor Name="AndAnotherMessage" TypeName="System.String" /></TypeDescriptors>
                       </TypeDescriptor>
                     </TypeDescriptors>
                   </TypeDescriptor>
@@ -51,7 +52,7 @@
                       <TypeDescriptor TypeName="System.String" Name="Message" />
                       <!-- TODO: Add TypeDescriptors when you add properties to Entity1. -->
                       <TypeDescriptor Name="AnotherMessage" TypeName="System.String" />
-                      </TypeDescriptors>
+                      <TypeDescriptor Name="AndAnotherMessage" TypeName="System.String" /></TypeDescriptors>
                   </TypeDescriptor>
                 </Parameter>
               </Parameters>
@@ -66,13 +67,15 @@
                     <TypeDescriptors>
                       <TypeDescriptor Name="Identifier1" IdentifierName="Identifier1" TypeName="System.String" />
                       <TypeDescriptor Name="Message" TypeName="System.String" />
-                      <TypeDescriptor Name="AnotherMessage" TypeName="System.String" /></TypeDescriptors></TypeDescriptor></Parameter>
+                      <TypeDescriptor Name="AnotherMessage" TypeName="System.String" />
+                      <TypeDescriptor Name="AndAnotherMessage" TypeName="System.String" /></TypeDescriptors></TypeDescriptor></Parameter>
                 <Parameter Name="newSimpleObject" Direction="In">
                   <TypeDescriptor Name="NewSimpleObject" TypeName="ExternalCT.ConnectivityModel.SimpleObject, ConnectivityModel">
                     <TypeDescriptors>
                       <TypeDescriptor Name="Identifier1" IdentifierName="Identifier1" TypeName="System.String" CreatorField="true" />
                       <TypeDescriptor Name="Message" TypeName="System.String" CreatorField="true" />
-                      <TypeDescriptor Name="AnotherMessage" TypeName="System.String" CreatorField="true" /></TypeDescriptors></TypeDescriptor></Parameter>
+                      <TypeDescriptor Name="AnotherMessage" TypeName="System.String" CreatorField="true" />
+                      <TypeDescriptor Name="AndAnotherMessage" TypeName="System.String" /></TypeDescriptors></TypeDescriptor></Parameter>
               </Parameters>
               <MethodInstances>
                 <MethodInstance Name="Create" Type="Creator" ReturnParameterName="returnSimpleObject" ReturnTypeDescriptorPath="ReturnSimpleObject" />
@@ -92,7 +95,8 @@
                     <TypeDescriptors>
                       <TypeDescriptor Name="Identifier1" IdentifierName="Identifier1" TypeName="System.String" UpdaterField="true" />
                       <TypeDescriptor Name="Message" TypeName="System.String" UpdaterField="true" />
-                      <TypeDescriptor Name="AnotherMessage" TypeName="System.String" UpdaterField="true" /></TypeDescriptors></TypeDescriptor></Parameter>
+                      <TypeDescriptor Name="AnotherMessage" TypeName="System.String" UpdaterField="true" />
+                      <TypeDescriptor Name="AndAnotherMessage" TypeName="System.String" /></TypeDescriptors></TypeDescriptor></Parameter>
               </Parameters>
               <MethodInstances>
                 <MethodInstance Name="Update" Type="Updater" />

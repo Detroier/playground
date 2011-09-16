@@ -1,5 +1,4 @@
-﻿using System;
-using System.Web;
+﻿using System.Web;
 using SharePointPlayground.Infrastructure.Mapping;
 
 namespace SharePointPlayground.Infrastructure.HttpModules

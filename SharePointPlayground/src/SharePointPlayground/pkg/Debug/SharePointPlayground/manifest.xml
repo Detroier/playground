@@ -16,11 +16,18 @@
     <Assembly Location="SharePointPlayground.dll" DeploymentTarget="GlobalAssemblyCache">
       <SafeControls>
         <SafeControl Assembly="SharePointPlayground, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4f2964e4fc1c04d8" Namespace="SharePointPlayground.SPI.WebParts.LastTasksByUserWebPart" TypeName="*" />
+        <SafeControl Assembly="SharePointPlayground, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4f2964e4fc1c04d8" Namespace="SharePointPlayground.SPI.WebParts.BlogsFromDatabaseWebPart" TypeName="*" />
       </SafeControls>
     </Assembly>
   </Assemblies>
+  <RootFiles>
+    <RootFile Location="ISAPI\SPPlayground\SiteTasksService.svc" />
+    <RootFile Location="ISAPI\SPPlayground\PostsService.svc" />
+  </RootFiles>
   <TemplateFiles>
     <TemplateFile Location="CONTROLTEMPLATES\SharePointPlayground.SPI.WebParts\LastTasksByUserWebPart\LastTasksByUserWebPartUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\SharePointPlayground.SPI.WebParts\BlogsFromDatabaseWebPart\BlogsFromDatabaseWebPartUserControl.ascx" />
+    <TemplateFile Location="Layouts\Handler\Handler.ashx" />
   </TemplateFiles>
   <FeatureManifests>
     <FeatureManifest Location="SharePointPlayground_SPPlaygroundWebParts\Feature.xml" />

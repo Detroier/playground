@@ -11,6 +11,7 @@ using Castle.Windsor;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor.Installer;
 using SharePointPlayground.Helpers.SharePoint;
+using SharePointPlayground.SPI.WebParts.LastTasksByUserWebPart;
 
 namespace NUnitTest1.Presenters
 {
@@ -31,10 +32,11 @@ namespace NUnitTest1.Presenters
 
 					using (IWindsorContainer kernel = ConfigureKernelForTest(site, user))
 					{
+						var view = new FakeLastTasksByUserView();
 						var presenter = kernel.Resolve<ILastTasksByUserPresenter>();
-						var presenterResults = presenter.GetLastTasks();
+						presenter.InitView(view);
 
-						Assert.LessOrEqual(presenterResults.Count(), 5);
+						Assert.LessOrEqual(view.Tasks.Count(), 5);
 					}
 				}
 			}
@@ -84,6 +86,15 @@ namespace NUnitTest1.Presenters
 		public SPSite GetSite()
 		{
 			return _site;
+		}
+	}
+
+	public class FakeLastTasksByUserView : ILastTasksByUserView
+	{
+		public IEnumerable<SharePointPlayground.ViewModels.TaskListItemViewModel> Tasks
+		{
+			get;
+			set;
 		}
 	}
 }

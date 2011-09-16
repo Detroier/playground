@@ -6,7 +6,7 @@
         <LobSystemInstance Name="ConnectivityModel" />
       </LobSystemInstances>
       <Entities>
-        <Entity Name="SimpleObject" Namespace="ExternalCT.ConnectivityModel" EstimatedInstanceCount="1000" Version="1.0.0.15">
+        <Entity Name="SimpleObject" Namespace="ExternalCT.ConnectivityModel" EstimatedInstanceCount="1000" Version="1.0.0.28">
           <Properties>
             <Property Name="Class" Type="System.String">ExternalCT.ConnectivityModel.SimpleObjectService, ConnectivityModel</Property>
           </Properties>
@@ -27,7 +27,8 @@
                           <TypeDescriptor TypeName="System.String" IdentifierName="Identifier1" Name="Identifier1" />
                           <TypeDescriptor TypeName="System.String" Name="Message" />
                           <!-- TODO: Add TypeDescriptors when you add properties to Entity1. -->
-                          <TypeDescriptor Name="AnotherMessage" TypeName="System.String" /></TypeDescriptors>
+                          <TypeDescriptor Name="AnotherMessage" TypeName="System.String" />
+                          <TypeDescriptor Name="AndAnotherMessage" TypeName="System.String" /></TypeDescriptors>
                       </TypeDescriptor>
                     </TypeDescriptors>
                   </TypeDescriptor>
@@ -51,7 +52,7 @@
                       <TypeDescriptor TypeName="System.String" Name="Message" />
                       <!-- TODO: Add TypeDescriptors when you add properties to Entity1. -->
                       <TypeDescriptor Name="AnotherMessage" TypeName="System.String" />
-                      </TypeDescriptors>
+                      <TypeDescriptor Name="AndAnotherMessage" TypeName="System.String" /></TypeDescriptors>
                   </TypeDescriptor>
                 </Parameter>
               </Parameters>
@@ -66,13 +67,15 @@
                     <TypeDescriptors>
                       <TypeDescriptor Name="Identifier1" IdentifierName="Identifier1" TypeName="System.String" />
                       <TypeDescriptor Name="Message" TypeName="System.String" />
-                      <TypeDescriptor Name="AnotherMessage" TypeName="System.String" /></TypeDescriptors></TypeDescriptor></Parameter>
+                      <TypeDescriptor Name="AnotherMessage" TypeName="System.String" />
+                      <TypeDescriptor Name="AndAnotherMessage" TypeName="System.String" /></TypeDescriptors></TypeDescriptor></Parameter>
                 <Parameter Name="newSimpleObject" Direction="In">
                   <TypeDescriptor Name="NewSimpleObject" TypeName="ExternalCT.ConnectivityModel.SimpleObject, ConnectivityModel">
                     <TypeDescriptors>
                       <TypeDescriptor Name="Identifier1" IdentifierName="Identifier1" TypeName="System.String" CreatorField="true" />
                       <TypeDescriptor Name="Message" TypeName="System.String" CreatorField="true" />
-                      <TypeDescriptor Name="AnotherMessage" TypeName="System.String" CreatorField="true" /></TypeDescriptors></TypeDescriptor></Parameter>
+                      <TypeDescriptor Name="AnotherMessage" TypeName="System.String" CreatorField="true" />
+                      <TypeDescriptor Name="AndAnotherMessage" TypeName="System.String" /></TypeDescriptors></TypeDescriptor></Parameter>
               </Parameters>
               <MethodInstances>
                 <MethodInstance Name="Create" Type="Creator" ReturnParameterName="returnSimpleObject" ReturnTypeDescriptorPath="ReturnSimpleObject" />
@@ -92,14 +95,106 @@
                     <TypeDescriptors>
                       <TypeDescriptor Name="Identifier1" IdentifierName="Identifier1" TypeName="System.String" UpdaterField="true" />
                       <TypeDescriptor Name="Message" TypeName="System.String" UpdaterField="true" />
-                      <TypeDescriptor Name="AnotherMessage" TypeName="System.String" UpdaterField="true" /></TypeDescriptors></TypeDescriptor></Parameter>
+                      <TypeDescriptor Name="AnotherMessage" TypeName="System.String" UpdaterField="true" />
+                      <TypeDescriptor Name="AndAnotherMessage" TypeName="System.String" /></TypeDescriptors></TypeDescriptor></Parameter>
               </Parameters>
               <MethodInstances>
                 <MethodInstance Name="Update" Type="Updater" />
               </MethodInstances></Method>
+            <Method Name="ReadList1">
+              <Parameters>
+                <Parameter Name="simpleObjectList" Direction="Return">
+                  <TypeDescriptor Name="SimpleObjectList" TypeName="System.Collections.Generic.IEnumerable`1[[ExternalCT.ConnectivityModel.SimpleObject, ConnectivityModel]]" IsCollection="true">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="SimpleObject" TypeName="ExternalCT.ConnectivityModel.SimpleObject, ConnectivityModel">
+                        <TypeDescriptors>
+                          <TypeDescriptor Name="Identifier1" IdentifierName="Identifier1" TypeName="System.String" />
+                          <TypeDescriptor Name="Message" TypeName="System.String" />
+                          <TypeDescriptor Name="AnotherMessage" TypeName="System.String" />
+                          <TypeDescriptor Name="AndAnotherMessage" TypeName="System.String" /></TypeDescriptors></TypeDescriptor></TypeDescriptors></TypeDescriptor></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="ReadList1" Type="Finder" ReturnParameterName="simpleObjectList" ReturnTypeDescriptorPath="SimpleObjectList" />
+              </MethodInstances></Method>
             <!-- end specific finder method -->
           </Methods>
         </Entity>
+        <Entity Name="DifficultObject" Namespace="ExternalCT.ConnectivityModel" Version="1.0.0.69">
+          <Properties>
+            <Property Name="Class" Type="System.String">ExternalCT.ConnectivityModel.DifficultObjectService, ConnectivityModel</Property>
+          </Properties>
+          <Identifiers>
+            <Identifier Name="ID" TypeName="System.Int32" />
+          </Identifiers>
+          <Methods>
+            <Method Name="ReadList">
+              <Parameters>
+                <Parameter Name="difficultObjectList" Direction="Return">
+                  <TypeDescriptor Name="DifficultObjectList" TypeName="System.Collections.Generic.IEnumerable`1[[ExternalCT.ConnectivityModel.DifficultObject, ConnectivityModel]]" IsCollection="true">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="DifficultObject" TypeName="System.Collections.Generic.IEnumerable`1[[ExternalCT.ConnectivityModel.DifficultObject, ConnectivityModel]]" IsCollection="true">
+                        <TypeDescriptors>
+                          <TypeDescriptor Name="ID" TypeName="System.Int32" IsCollection="false" />
+                          <TypeDescriptor Name="Title" TypeName="System.String" />
+                          <TypeDescriptor Name="Text" TypeName="System.String" /></TypeDescriptors></TypeDescriptor></TypeDescriptors></TypeDescriptor></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="ReadList" Type="Finder" ReturnParameterName="difficultObjectList" ReturnTypeDescriptorPath="DifficultObjectList" />
+              </MethodInstances></Method>
+            <Method Name="Create">
+              <Parameters>
+                <Parameter Name="returnDifficultObject" Direction="Return">
+                  <TypeDescriptor Name="ReturnDifficultObject" IsCollection="true" TypeName="System.Collections.Generic.IEnumerable`1[[ExternalCT.ConnectivityModel.DifficultObject, ConnectivityModel]]">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="ID" IsCollection="false" TypeName="System.Int32" />
+                      <TypeDescriptor Name="Title" TypeName="System.String" />
+                      <TypeDescriptor Name="Text" TypeName="System.String" /></TypeDescriptors></TypeDescriptor></Parameter>
+                <Parameter Name="newDifficultObject" Direction="In">
+                  <TypeDescriptor Name="NewDifficultObject" IsCollection="true" TypeName="System.Collections.Generic.IEnumerable`1[[ExternalCT.ConnectivityModel.DifficultObject, ConnectivityModel]]">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="ID" IsCollection="false" TypeName="System.Int32" CreatorField="true" />
+                      <TypeDescriptor Name="Title" TypeName="System.String" CreatorField="true" />
+                      <TypeDescriptor Name="Text" TypeName="System.String" CreatorField="true" /></TypeDescriptors></TypeDescriptor></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="Create" Type="Creator" ReturnParameterName="returnDifficultObject" ReturnTypeDescriptorPath="ReturnDifficultObject" />
+              </MethodInstances></Method>
+            <Method Name="Delete">
+              <Parameters>
+                <Parameter Name="iD" Direction="In">
+                  <TypeDescriptor Name="ID" TypeName="System.Int32" IdentifierEntityName="DifficultObject" IdentifierEntityNamespace="ExternalCT.ConnectivityModel" IdentifierName="ID" /></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="Delete" Type="Deleter" />
+              </MethodInstances></Method>
+            <Method Name="ReadItem">
+              <Parameters>
+                <Parameter Name="difficultObject" Direction="Return">
+                  <TypeDescriptor Name="DifficultObject" IsCollection="true" TypeName="System.Collections.Generic.IEnumerable`1[[ExternalCT.ConnectivityModel.DifficultObject, ConnectivityModel]]">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="ID" IsCollection="false" TypeName="System.Int32" />
+                      <TypeDescriptor Name="Title" TypeName="System.String" />
+                      <TypeDescriptor Name="Text" TypeName="System.String" /></TypeDescriptors></TypeDescriptor></Parameter>
+                <Parameter Name="iD" Direction="In">
+                  <TypeDescriptor Name="ID" TypeName="System.Int32" IdentifierEntityName="DifficultObject" IdentifierEntityNamespace="ExternalCT.ConnectivityModel" IdentifierName="ID" /></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="ReadItem" Type="SpecificFinder" ReturnParameterName="difficultObject" ReturnTypeDescriptorPath="DifficultObject" />
+              </MethodInstances></Method>
+            <Method Name="Update">
+              <Parameters>
+                <Parameter Name="difficultObject" Direction="In">
+                  <TypeDescriptor Name="DifficultObject" IsCollection="true" TypeName="System.Collections.Generic.IEnumerable`1[[ExternalCT.ConnectivityModel.DifficultObject, ConnectivityModel]]">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="ID" IsCollection="false" TypeName="System.Int32" UpdaterField="true" />
+                      <TypeDescriptor Name="Title" TypeName="System.String" UpdaterField="true" />
+                      <TypeDescriptor Name="Text" TypeName="System.String" UpdaterField="true" /></TypeDescriptors></TypeDescriptor></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="Update" Type="Updater" />
+              </MethodInstances></Method>
+          </Methods>
+          </Entity>
       </Entities>
     </LobSystem>
   </LobSystems>

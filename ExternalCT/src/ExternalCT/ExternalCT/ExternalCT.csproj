@@ -51,6 +51,9 @@
     <Reference Include="Microsoft.SharePoint.Security" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnectivityModel\DifficultObject.cs" />
+    <Compile Include="ConnectivityModel\DifficultObjectService.cs" />
+    <Compile Include="ConnectivityModel\EntityService.cs" />
     <Compile Include="ConnectivityModel\SimpleObject.cs" />
     <Compile Include="ConnectivityModel\SimpleObjectService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

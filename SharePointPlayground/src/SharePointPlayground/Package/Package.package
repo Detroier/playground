@@ -22,4 +22,8 @@
     <featureReference itemId="be4bcfa7-4c44-4d4b-8800-d663db030794" />
     <featureReference itemId="2abfae7f-5c71-4887-a390-1906850234d7" />
   </features>
+  <projectItems>
+    <projectItemReference itemId="d74ffc16-2750-4f4c-b756-2d456997fff3" />
+    <projectItemReference itemId="72d54acc-ea0c-4f57-aaee-40c6c61ee3f5" />
+  </projectItems>
 </package>

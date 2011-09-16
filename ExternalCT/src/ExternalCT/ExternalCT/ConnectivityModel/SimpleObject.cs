@@ -15,5 +15,7 @@ namespace ExternalCT.ConnectivityModel
 		public string Identifier1 { get; set; }
 		public string Message { get; set; }
 		public string AnotherMessage { get; set; }
+
+		public string AndAnotherMessage { get; set; }
 	}
 }

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="SPPlayground" Id="1f496bfb-f7fc-4821-9b40-7fcc539c9313" Scope="Web">
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" ActivateOnDefault="FALSE" Id="1f496bfb-f7fc-4821-9b40-7fcc539c9313" Scope="Web" Title="SPPlayground">
   <ElementManifests>
     <ElementManifest Location="MORoot\Elements.xml" />
     <ElementFile Location="MORoot\default.aspx" />
