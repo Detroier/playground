@@ -1,0 +1,4 @@
+﻿- cannot use latest EF, shouldnt use nhibernate :(
+- take some approach from nhib and provide some kind of API for entities.
+- provide some clear solution for lifestyle management of SqlSession
+- probably use repositories and go from that?

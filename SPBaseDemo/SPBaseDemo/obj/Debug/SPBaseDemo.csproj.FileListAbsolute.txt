@@ -1,0 +1,8 @@
+D:\Home\PersonalDevel\playground\SPBaseDemo\SPBaseDemo\obj\Debug\ResolveAssemblyReference.cache
+D:\Home\PersonalDevel\playground\SPBaseDemo\SPBaseDemo\bin\Debug\SPBaseDemo.dll
+D:\Home\PersonalDevel\playground\SPBaseDemo\SPBaseDemo\bin\Debug\SPBaseDemo.pdb
+D:\Home\PersonalDevel\playground\SPBaseDemo\SPBaseDemo\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Home\PersonalDevel\playground\SPBaseDemo\SPBaseDemo\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\Home\PersonalDevel\playground\SPBaseDemo\SPBaseDemo\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Home\PersonalDevel\playground\SPBaseDemo\SPBaseDemo\obj\Debug\SPBaseDemo.dll
+D:\Home\PersonalDevel\playground\SPBaseDemo\SPBaseDemo\obj\Debug\SPBaseDemo.pdb

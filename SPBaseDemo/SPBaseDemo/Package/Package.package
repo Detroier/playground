@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="a787324b-e149-4a2a-984d-e1df122a0275" solutionId="a787324b-e149-4a2a-984d-e1df122a0275" resetWebServer="false" name="SPBaseDemo" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="EntityFramework.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="Assemblies\EntityFramework.dll" />
+    <customAssembly location="Microsoft.Practices.ServiceLocation.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="Assemblies\Microsoft.Practices.ServiceLocation.dll" />
+    <customAssembly location="Microsoft.Practices.Unity.Configuration.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="Assemblies\Microsoft.Practices.Unity.Configuration.dll" />
+    <customAssembly location="Microsoft.Practices.Unity.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="Assemblies\Microsoft.Practices.Unity.dll" />
+  </assemblies>
+  <projectItems>
+    <projectItemReference itemId="c5198045-37be-453f-ac7b-e4535aa76b0f" />
+    <projectItemReference itemId="71607983-260f-406a-ad17-4078793920b6" />
+  </projectItems>
+</package>

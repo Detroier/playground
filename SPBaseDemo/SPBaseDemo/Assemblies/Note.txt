@@ -1,0 +1,4 @@
+﻿Recommendation:
+	Assemblies folder should hold all external dll files, that are used in project. Doing this, we can more easily put these files into package and eventually into GAC.
+
+	It is a bit of duplication, and files will require replace every time, that dependency is added or updated :(

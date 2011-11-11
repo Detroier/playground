@@ -1,31 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug\NUnitTest1.exe" total="3" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-09-12" time="18:04:47">
+<test-results name="D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug\NUnitTest1.exe" total="3" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-10-12" time="13:53:18">
   <environment nunit-version="2.5.10.11092" clr-version="2.0.50727.4961" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug" machine-name="WL033766" user="poladmar" user-domain="EU" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug\NUnitTest1.exe" executed="True" result="Success" success="True" time="11.457" asserts="0">
+  <test-suite type="Assembly" name="D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\bin\Debug\NUnitTest1.exe" executed="True" result="Failure" success="False" time="10.027" asserts="0">
     <results>
-      <test-suite type="Namespace" name="NUnitTest1" executed="True" result="Success" success="True" time="11.445" asserts="0">
+      <test-suite type="Namespace" name="NUnitTest1" executed="True" result="Failure" success="False" time="10.014" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Infrastructure" executed="True" result="Success" success="True" time="9.876" asserts="0">
+          <test-suite type="Namespace" name="Infrastructure" executed="True" result="Success" success="True" time="0.535" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Mapping" executed="True" result="Success" success="True" time="9.875" asserts="0">
+              <test-suite type="Namespace" name="Mapping" executed="True" result="Success" success="True" time="0.535" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="AutomapperSPItemTests" executed="True" result="Success" success="True" time="9.873" asserts="0">
+                  <test-suite type="TestFixture" name="AutomapperSPItemTests" executed="True" result="Success" success="True" time="0.534" asserts="0">
                     <results>
-                      <test-case name="NUnitTest1.Infrastructure.Mapping.AutomapperSPItemTests.Can_Map_SPListItem_To_OtherType" executed="True" result="Success" success="True" time="9.812" asserts="3" />
-                      <test-case name="NUnitTest1.Infrastructure.Mapping.AutomapperSPItemTests.Can_Map_SPListItemCollection" executed="True" result="Success" success="True" time="0.042" asserts="1" />
+                      <test-case name="NUnitTest1.Infrastructure.Mapping.AutomapperSPItemTests.Can_Map_SPListItem_To_OtherType" executed="True" result="Success" success="True" time="0.500" asserts="0" />
+                      <test-case name="NUnitTest1.Infrastructure.Mapping.AutomapperSPItemTests.Can_Map_SPListItemCollection" executed="True" result="Success" success="True" time="0.015" asserts="0" />
                     </results>
                   </test-suite>
                 </results>
               </test-suite>
             </results>
           </test-suite>
-          <test-suite type="Namespace" name="Presenters" executed="True" result="Success" success="True" time="1.565" asserts="0">
+          <test-suite type="Namespace" name="Presenters" executed="True" result="Failure" success="False" time="9.474" asserts="0">
             <results>
-              <test-suite type="TestFixture" name="LastTasksByUserPresenterTests" executed="True" result="Success" success="True" time="1.564" asserts="0">
+              <test-suite type="TestFixture" name="LastTasksByUserPresenterTests" executed="True" result="Failure" success="False" time="9.474" asserts="0">
                 <results>
-                  <test-case name="NUnitTest1.Presenters.LastTasksByUserPresenterTests.Can_Load_Last_Tasks_For_User" executed="True" result="Success" success="True" time="1.564" asserts="1" />
+                  <test-case name="NUnitTest1.Presenters.LastTasksByUserPresenterTests.Can_Load_Last_Tasks_For_User" executed="True" result="Error" success="False" time="9.472" asserts="0">
+                    <failure>
+                      <message><![CDATA[Castle.MicroKernel.Handlers.HandlerException : Can't create component 'SharePointPlayground.Presenters.LastTasksByUserPresenterWithScope' as it has dependencies to be satisfied. 
+SharePointPlayground.Presenters.LastTasksByUserPresenterWithScope is waiting for the following dependencies: 
+
+Services: 
+- SharePointPlayground.Presenters.ILastTasksByUserPresenter. 
+  A dependency cannot be satisfied by itself, did you forget to add a parameter name to differentiate between the two dependencies? 
+
+SharePointPlayground.Presenters.LastTasksByUserPresenter is registered and is matching the required service, but cannot be resolved.
+
+SharePointPlayground.Presenters.LastTasksByUserPresenter is waiting for the following dependencies: 
+
+Services: 
+- SharePointPlayground.Queries.ILastTasksByUserQuery which was registered but is also waiting for dependencies. 
+
+SharePointPlayground.Queries.LastTasksByUserQuery is waiting for the following dependencies: 
+
+Services: 
+- SharePointPlayground.Mapping.IMapper`2[[System.Data.DataTable, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Collections.Generic.List`1[[SharePointPlayground.ViewModels.TaskListItemViewModel, SharePointPlayground, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4f2964e4fc1c04d8]], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]] which was not registered. 
+]]></message>
+                      <stack-trace><![CDATA[at Castle.MicroKernel.Handlers.DefaultHandler.AssertNotWaitingForDependency()
+at Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired)
+at Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context, Boolean instanceRequired)
+at Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments)
+at Castle.Windsor.WindsorContainer.Resolve[T]()
+at NUnitTest1.Presenters.LastTasksByUserPresenterTests.Can_Load_Last_Tasks_For_User() in D:\Home\PersonalDevel\playground\SharePointPlayground\src\NUnitTest1\Presenters\LastTasksByUserPresenterTests.cs:line 36
+]]></stack-trace>
+                    </failure>
+                  </test-case>
                 </results>
               </test-suite>
             </results>

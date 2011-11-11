@@ -1,0 +1,2 @@
+﻿IHttpHandler implementations should go here! If project is setup correctly, handlers will be accesible on following url:
+	/_layouts/SPBaseDemo/Handler.ashx/<HandlerName>

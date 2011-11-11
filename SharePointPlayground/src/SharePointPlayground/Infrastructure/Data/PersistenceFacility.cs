@@ -8,9 +8,8 @@ using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
 using NHibernate.Cfg;
-using SharePointPlayground.Model;
-using System.Web;
 using SharePointPlayground.Infrastructure.HttpModules;
+using SharePointPlayground.Model;
 
 namespace SharePointPlayground.Infrastructure.Data
 {
@@ -25,7 +24,8 @@ namespace SharePointPlayground.Infrastructure.Data
 			Kernel.Register(Component.For<ISessionFactoryProvider>().AsFactory());
 			Kernel.Register(Component.For<IEnumerable<ISessionFactory>>().UsingFactoryMethod(k => k.ResolveAll<ISessionFactory>()));
 
-			HttpContext.Current.Application[SessionFactoryProvider.Key] = Kernel.Resolve<ISessionFactoryProvider>();
+			//TODO: this doesn't work in tests! which sucks..make sure to fix it
+			//HttpContext.Current.Application[SessionFactoryProvider.Key] = Kernel.Resolve<ISessionFactoryProvider>();
 		}
 
 		private Configuration BuildDatabaseConfiguration()
@@ -40,7 +40,6 @@ namespace SharePointPlayground.Infrastructure.Data
 							})
 							.BuildConfiguration();
 			configuration.Properties[NHibernate.Cfg.Environment.CurrentSessionContextClass] = typeof(LazySessionContext).AssemblyQualifiedName;
-
 			return configuration;
 		}
 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5cc85390-0246-40b4-b0df-2ca929fa7396" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:22221/DummyService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DummyService.wsdl" MetadataType="Wsdl" ID="9e350900-88bc-4dd9-92cb-ed894cd50bf5" SourceId="1" SourceUrl="http://localhost:22221/DummyService.svc?wsdl" />
+    <MetadataFile FileName="DummyService.xsd" MetadataType="Schema" ID="dc4b7d93-9190-42ff-aa8b-f7a458fe46a8" SourceId="1" SourceUrl="http://localhost:22221/DummyService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DummyService1.xsd" MetadataType="Schema" ID="d351489f-40b2-4097-a6fd-f129a5459307" SourceId="1" SourceUrl="http://localhost:22221/DummyService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

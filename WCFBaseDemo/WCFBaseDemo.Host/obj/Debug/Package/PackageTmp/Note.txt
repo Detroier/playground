@@ -1,0 +1,6 @@
+﻿- Host project, should only contain web stuffs
+
+- Bad surprises:
+	- interfaces cannot be used in *.svc files :(
+		- this should be somehow reflected in project structure..no?
+	- look at services as at controllers?	

@@ -1,0 +1,6 @@
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo.Host.DeploymentTests\bin\Debug\WCFBaseDemo.Host.DeploymentTests.dll.config
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo.Host.DeploymentTests\bin\Debug\WCFBaseDemo.Host.DeploymentTests.dll
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo.Host.DeploymentTests\bin\Debug\WCFBaseDemo.Host.DeploymentTests.pdb
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo.Host.DeploymentTests\obj\Debug\ResolveAssemblyReference.cache
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo.Host.DeploymentTests\obj\Debug\WCFBaseDemo.Host.DeploymentTests.dll
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo.Host.DeploymentTests\obj\Debug\WCFBaseDemo.Host.DeploymentTests.pdb

@@ -1,39 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="D:\Home\PersonalDevel\playground\SharePointPlayground\src\SharePointPlaygroundTests\bin\Debug\SharePointPlaygroundTests.exe" total="9" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-08-23" time="17:53:54">
+<test-results name="D:\Home\PersonalDevel\playground\SharePointPlayground\src\SharePointPlaygroundTests\bin\Debug\SharePointPlaygroundTests.exe" total="10" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-09-16" time="18:10:18">
   <environment nunit-version="2.5.10.11092" clr-version="2.0.50727.4961" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="D:\Home\PersonalDevel\playground\SharePointPlayground\src\SharePointPlaygroundTests\bin\Debug" machine-name="WL033766" user="poladmar" user-domain="EU" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="D:\Home\PersonalDevel\playground\SharePointPlayground\src\SharePointPlaygroundTests\bin\Debug\SharePointPlaygroundTests.exe" executed="True" result="Success" success="True" time="1.529" asserts="0">
+  <test-suite type="Assembly" name="D:\Home\PersonalDevel\playground\SharePointPlayground\src\SharePointPlaygroundTests\bin\Debug\SharePointPlaygroundTests.exe" executed="True" result="Success" success="True" time="4.930" asserts="0">
     <results>
-      <test-suite type="Namespace" name="SharePointPlaygroundTests" executed="True" result="Success" success="True" time="1.517" asserts="0">
+      <test-suite type="Namespace" name="SharePointPlaygroundTests" executed="True" result="Success" success="True" time="4.914" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Infrastructure" executed="True" result="Success" success="True" time="1.516" asserts="0">
+          <test-suite type="Namespace" name="Infrastructure" executed="True" result="Success" success="True" time="4.914" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Container" executed="True" result="Success" success="True" time="0.878" asserts="0">
+              <test-suite type="Namespace" name="Container" executed="True" result="Success" success="True" time="4.586" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="ContainerExtensionTests" executed="True" result="Success" success="True" time="0.869" asserts="0">
+                  <test-suite type="TestFixture" name="ContainerExtensionTests" executed="True" result="Success" success="True" time="4.540" asserts="0">
                     <results>
-                      <test-case name="SharePointPlaygroundTests.Infrastructure.Container.ContainerExtensionTests.Can_Inject_Stuff_To_Injectable_Page_Child" executed="True" result="Success" success="True" time="0.813" asserts="2" />
-                      <test-case name="SharePointPlaygroundTests.Infrastructure.Container.ContainerExtensionTests.Can_Inject_Stuff_To_Injectable_WebPart_Child" executed="True" result="Success" success="True" time="0.025" asserts="1" />
-                      <test-case name="SharePointPlaygroundTests.Infrastructure.Container.ContainerExtensionTests.Can_Release_Injected_Properties_From_Object" executed="True" result="Success" success="True" time="0.006" asserts="0" />
-                      <test-case name="SharePointPlaygroundTests.Infrastructure.Container.ContainerExtensionTests.Can_Resolve_Public_Properties_In_ExistingObject" executed="True" result="Success" success="True" time="0.004" asserts="2" />
+                      <test-case name="SharePointPlaygroundTests.Infrastructure.Container.ContainerExtensionTests.Can_Inject_Stuff_To_Injectable_Page_Child" executed="True" result="Success" success="True" time="4.384" asserts="2" />
+                      <test-case name="SharePointPlaygroundTests.Infrastructure.Container.ContainerExtensionTests.Can_Inject_Stuff_To_Injectable_WebPart_Child" executed="True" result="Success" success="True" time="0.062" asserts="1" />
+                      <test-case name="SharePointPlaygroundTests.Infrastructure.Container.ContainerExtensionTests.Can_Release_Injected_Properties_From_Object" executed="True" result="Success" success="True" time="0.047" asserts="0" />
+                      <test-case name="SharePointPlaygroundTests.Infrastructure.Container.ContainerExtensionTests.Can_Resolve_Public_Properties_In_ExistingObject" executed="True" result="Success" success="True" time="0.031" asserts="2" />
                     </results>
                   </test-suite>
-                  <test-suite type="TestFixture" name="ContainerTests" executed="True" result="Success" success="True" time="0.003" asserts="0">
+                  <test-suite type="TestFixture" name="ContainerTests" executed="True" result="Success" success="True" time="0.047" asserts="0">
                     <results>
-                      <test-case name="SharePointPlaygroundTests.Infrastructure.Container.ContainerTests.Can_Setup_Container" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+                      <test-case name="SharePointPlaygroundTests.Infrastructure.Container.ContainerTests.Can_Setup_Container" executed="True" result="Success" success="True" time="0.047" asserts="0" />
                     </results>
                   </test-suite>
                 </results>
               </test-suite>
-              <test-suite type="Namespace" name="Mapping" executed="True" result="Success" success="True" time="0.636" asserts="0">
+              <test-suite type="Namespace" name="Mapping" executed="True" result="Success" success="True" time="0.328" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="AutomapperConfigurationTests" executed="True" result="Success" success="True" time="0.636" asserts="0">
+                  <test-suite type="TestFixture" name="AutomapperConfigurationTests" executed="True" result="Success" success="True" time="0.328" asserts="0">
                     <results>
-                      <test-case name="SharePointPlaygroundTests.Infrastructure.Mapping.AutomapperConfigurationTests.Can_Autoconfigure_SPItem" executed="True" result="Success" success="True" time="0.414" asserts="1" />
-                      <test-case name="SharePointPlaygroundTests.Infrastructure.Mapping.AutomapperConfigurationTests.Can_Ignore_Fields_In_SPItem_Mapping" executed="True" result="Success" success="True" time="0.010" asserts="1" />
-                      <test-case name="SharePointPlaygroundTests.Infrastructure.Mapping.AutomapperConfigurationTests.Can_Map_DataTable_With_Use_Of_Extension_Method" executed="True" result="Success" success="True" time="0.175" asserts="2" />
-                      <test-case name="SharePointPlaygroundTests.Infrastructure.Mapping.AutomapperConfigurationTests.Ensure_Mapper_Can_Be_Configured" executed="True" result="Success" success="True" time="0.035" asserts="0" />
+                      <test-case name="SharePointPlaygroundTests.Infrastructure.Mapping.AutomapperConfigurationTests.Can_Add_Configuration_From_Container" executed="True" result="Success" success="True" time="0.078" asserts="1" />
+                      <test-case name="SharePointPlaygroundTests.Infrastructure.Mapping.AutomapperConfigurationTests.Can_Autoconfigure_SPItem" executed="True" result="Success" success="True" time="0.109" asserts="1" />
+                      <test-case name="SharePointPlaygroundTests.Infrastructure.Mapping.AutomapperConfigurationTests.Can_Ignore_Fields_In_SPItem_Mapping" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                      <test-case name="SharePointPlaygroundTests.Infrastructure.Mapping.AutomapperConfigurationTests.Can_Map_DataTable_With_Use_Of_Extension_Method" executed="True" result="Success" success="True" time="0.094" asserts="0" />
+                      <test-case name="SharePointPlaygroundTests.Infrastructure.Mapping.AutomapperConfigurationTests.Ensure_Mapper_Can_Be_Configured" executed="True" result="Success" success="True" time="0.031" asserts="0" />
                     </results>
                   </test-suite>
                 </results>

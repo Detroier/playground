@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="ae35e186-287f-41b2-bd6e-809d8f8f1ccc" name="poladmar@WL033766 2011-11-09 18:48:54" runUser="EU\poladmar" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="8ade650e-4af8-415d-b3e8-b44d3ce8c4dd">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="poladmar_WL033766 2011-11-09 18_48_54">
+      <DeploymentItem filename="D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo.Host\bin\WCFBaseDemo.Host.dll" />
+      <DeploymentItem filename="D:\Home\PersonalDevel\playground\WCFBaseDemo\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll" />
+      <DeploymentItem filename="D:\Home\PersonalDevel\playground\WCFBaseDemo\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.dll" />
+      <DeploymentItem filename="D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo\bin\Debug\WCFBaseDemo.dll" />
+      <DeploymentItem filename="D:\Home\PersonalDevel\playground\WCFBaseDemo\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Configuration.dll" />
+      <DeploymentItem filename="D:\Home\PersonalDevel\playground\WCFBaseDemo\packages\Moq.4.0.10827\lib\NET40\Moq.dll" />
+      <DeploymentItem filename="D:\Home\PersonalDevel\playground\WCFBaseDemo\packages\EntityFramework.4.2.0.0\lib\net40\EntityFramework.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-11-09T18:48:54.7763637+01:00" queuing="2011-11-09T18:48:59.7136461+01:00" start="2011-11-09T18:48:59.8776555+01:00" finish="2011-11-09T18:49:02.3927994+01:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="8" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="7" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="WL033766" outcome="Error" timestamp="2011-11-09T18:49:02.3907993+01:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CanConfigureContainer" storage="d:\home\personaldevel\playground\wcfbasedemo\wcfbasedemo.tests\bin\debug\wcfbasedemo.tests.dll" id="f79ed4a1-2d14-1fb9-4ea6-40efb010aac8">
+      <Execution id="63106f32-23f3-49f6-b2f7-65f48734bc02" />
+      <TestMethod codeBase="D:/Home/PersonalDevel/playground/WCFBaseDemo/WCFBaseDemo.Tests/bin/Debug/WCFBaseDemo.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WCFBaseDemo.Tests.Host.Infrastructure.Container.ContainerBootstrapperTest, WCFBaseDemo.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanConfigureContainer" />
+    </UnitTest>
+    <UnitTest name="CanProvideContext" storage="d:\home\personaldevel\playground\wcfbasedemo\wcfbasedemo.tests\bin\debug\wcfbasedemo.tests.dll" id="3793c3b3-6864-4936-287a-9a645d276d48">
+      <Execution id="a77914aa-878a-4cf3-8b4c-e0bf31d7850b" />
+      <TestMethod codeBase="D:/Home/PersonalDevel/playground/WCFBaseDemo/WCFBaseDemo.Tests/bin/Debug/WCFBaseDemo.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WCFBaseDemo.Tests.Infrastructure.Data.HttpContextTrackingFactoryTest, WCFBaseDemo.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanProvideContext" />
+    </UnitTest>
+    <UnitTest name="CanProvideCorrectHttpContextProvider" storage="d:\home\personaldevel\playground\wcfbasedemo\wcfbasedemo.tests\bin\debug\wcfbasedemo.tests.dll" id="3e464b7f-3bc2-b617-57cb-38ea1993d088">
+      <Execution id="2828d694-14b4-4cb6-8140-d22915518c31" />
+      <TestMethod codeBase="D:/Home/PersonalDevel/playground/WCFBaseDemo/WCFBaseDemo.Tests/bin/Debug/WCFBaseDemo.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WCFBaseDemo.Tests.Host.Infrastructure.Container.ContainerBootstrapperTest, WCFBaseDemo.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanProvideCorrectHttpContextProvider" />
+    </UnitTest>
+    <UnitTest name="CanCreateContext" storage="d:\home\personaldevel\playground\wcfbasedemo\wcfbasedemo.tests\bin\debug\wcfbasedemo.tests.dll" id="02e2cdaf-7529-dcbd-92cf-1fbbf101f7f0">
+      <Execution id="ec165c0a-4da4-487e-98ed-014a4d041dcf" />
+      <TestMethod codeBase="D:/Home/PersonalDevel/playground/WCFBaseDemo/WCFBaseDemo.Tests/bin/Debug/WCFBaseDemo.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WCFBaseDemo.Tests.Data.WcfBaseDemoDbContextHttpTrackingFactoryTest, WCFBaseDemo.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanCreateContext" />
+    </UnitTest>
+    <UnitTest name="CanLocateInstallersInAssembly" storage="d:\home\personaldevel\playground\wcfbasedemo\wcfbasedemo.tests\bin\debug\wcfbasedemo.tests.dll" id="7846bf14-5a66-6735-a159-e7e0d561d81c">
+      <Execution id="3e39143f-689a-4e93-a023-d56d8a24bab4" />
+      <TestMethod codeBase="D:/Home/PersonalDevel/playground/WCFBaseDemo/WCFBaseDemo.Tests/bin/Debug/WCFBaseDemo.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WCFBaseDemo.Tests.Infrastructure.Container.InstallersProviderTest, WCFBaseDemo.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanLocateInstallersInAssembly" />
+    </UnitTest>
+    <UnitTest name="CanInvokeDummyService" storage="d:\home\personaldevel\playground\wcfbasedemo\wcfbasedemo.host.deploymenttests\bin\debug\wcfbasedemo.host.deploymenttests.dll" id="6ecf0c46-d28c-29e9-5077-e81e65ddd2c3">
+      <Execution id="09f5f62b-749e-4e11-a4b5-af4553a0a585" />
+      <TestMethod codeBase="D:/Home/PersonalDevel/playground/WCFBaseDemo/WCFBaseDemo.Host.DeploymentTests/bin/Debug/WCFBaseDemo.Host.DeploymentTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WCFBaseDemo.Host.DeploymentTests.ServicesOnLocalIISTest, WCFBaseDemo.Host.DeploymentTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanInvokeDummyService" />
+    </UnitTest>
+    <UnitTest name="CanConfigureContainer" storage="d:\home\personaldevel\playground\wcfbasedemo\wcfbasedemo.tests\bin\debug\wcfbasedemo.tests.dll" id="29c4a973-ccd9-2f51-d12a-cda0f06673ec">
+      <Execution id="6a0e57df-4e7f-4e6d-b10c-86fa9749dbc0" />
+      <TestMethod codeBase="D:/Home/PersonalDevel/playground/WCFBaseDemo/WCFBaseDemo.Tests/bin/Debug/WCFBaseDemo.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WCFBaseDemo.Tests.Infrastructure.Container.ContainerConfiguratorTest, WCFBaseDemo.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanConfigureContainer" />
+    </UnitTest>
+    <UnitTest name="CanProvideInstanceForHost" storage="d:\home\personaldevel\playground\wcfbasedemo\wcfbasedemo.host.tests\bin\debug\wcfbasedemo.host.tests.dll" id="492cd653-140d-b34b-f6ef-ef801551a4d7">
+      <Execution id="cf89df6b-0c2d-41c0-922b-a6bb4b4a8986" />
+      <TestMethod codeBase="D:/Home/PersonalDevel/playground/WCFBaseDemo/WCFBaseDemo.Host.Tests/bin/Debug/WCFBaseDemo.Host.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WCFBaseDemo.Host.Tests.Infrastructure.WCF.UnityServiceBehaviorTest, WCFBaseDemo.Host.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanProvideInstanceForHost" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="02e2cdaf-7529-dcbd-92cf-1fbbf101f7f0" executionId="ec165c0a-4da4-487e-98ed-014a4d041dcf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="29c4a973-ccd9-2f51-d12a-cda0f06673ec" executionId="6a0e57df-4e7f-4e6d-b10c-86fa9749dbc0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3793c3b3-6864-4936-287a-9a645d276d48" executionId="a77914aa-878a-4cf3-8b4c-e0bf31d7850b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3e464b7f-3bc2-b617-57cb-38ea1993d088" executionId="2828d694-14b4-4cb6-8140-d22915518c31" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="492cd653-140d-b34b-f6ef-ef801551a4d7" executionId="cf89df6b-0c2d-41c0-922b-a6bb4b4a8986" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6ecf0c46-d28c-29e9-5077-e81e65ddd2c3" executionId="09f5f62b-749e-4e11-a4b5-af4553a0a585" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7846bf14-5a66-6735-a159-e7e0d561d81c" executionId="3e39143f-689a-4e93-a023-d56d8a24bab4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f79ed4a1-2d14-1fb9-4ea6-40efb010aac8" executionId="63106f32-23f3-49f6-b2f7-65f48734bc02" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="ec165c0a-4da4-487e-98ed-014a4d041dcf" testId="02e2cdaf-7529-dcbd-92cf-1fbbf101f7f0" testName="CanCreateContext" computerName="WL033766" duration="00:00:02.3591349" startTime="2011-11-09T18:49:00.0326644+01:00" endTime="2011-11-09T18:49:02.3917993+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ec165c0a-4da4-487e-98ed-014a4d041dcf">
+    </UnitTestResult>
+    <UnitTestResult executionId="6a0e57df-4e7f-4e6d-b10c-86fa9749dbc0" testId="29c4a973-ccd9-2f51-d12a-cda0f06673ec" testName="CanConfigureContainer" computerName="WL033766" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6a0e57df-4e7f-4e6d-b10c-86fa9749dbc0">
+    </UnitTestResult>
+    <UnitTestResult executionId="a77914aa-878a-4cf3-8b4c-e0bf31d7850b" testId="3793c3b3-6864-4936-287a-9a645d276d48" testName="CanProvideContext" computerName="WL033766" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a77914aa-878a-4cf3-8b4c-e0bf31d7850b">
+    </UnitTestResult>
+    <UnitTestResult executionId="2828d694-14b4-4cb6-8140-d22915518c31" testId="3e464b7f-3bc2-b617-57cb-38ea1993d088" testName="CanProvideCorrectHttpContextProvider" computerName="WL033766" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2828d694-14b4-4cb6-8140-d22915518c31">
+    </UnitTestResult>
+    <UnitTestResult executionId="cf89df6b-0c2d-41c0-922b-a6bb4b4a8986" testId="492cd653-140d-b34b-f6ef-ef801551a4d7" testName="CanProvideInstanceForHost" computerName="WL033766" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cf89df6b-0c2d-41c0-922b-a6bb4b4a8986">
+    </UnitTestResult>
+    <UnitTestResult executionId="09f5f62b-749e-4e11-a4b5-af4553a0a585" testId="6ecf0c46-d28c-29e9-5077-e81e65ddd2c3" testName="CanInvokeDummyService" computerName="WL033766" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="09f5f62b-749e-4e11-a4b5-af4553a0a585">
+    </UnitTestResult>
+    <UnitTestResult executionId="3e39143f-689a-4e93-a023-d56d8a24bab4" testId="7846bf14-5a66-6735-a159-e7e0d561d81c" testName="CanLocateInstallersInAssembly" computerName="WL033766" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3e39143f-689a-4e93-a023-d56d8a24bab4">
+    </UnitTestResult>
+    <UnitTestResult executionId="63106f32-23f3-49f6-b2f7-65f48734bc02" testId="f79ed4a1-2d14-1fb9-4ea6-40efb010aac8" testName="CanConfigureContainer" computerName="WL033766" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="63106f32-23f3-49f6-b2f7-65f48734bc02">
+    </UnitTestResult>
+  </Results>
+</TestRun>

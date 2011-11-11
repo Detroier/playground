@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="b4b31512-e528-47b7-b96f-3e97f4437508" name="poladmar@WL033766 2011-11-09 11:00:08" runUser="EU\poladmar" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="8ade650e-4af8-415d-b3e8-b44d3ce8c4dd">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="poladmar_WL033766 2011-11-09 11_00_08">
+      <DeploymentItem filename="D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo.Host\bin\WCFBaseDemo.Host.dll" />
+      <DeploymentItem filename="D:\Home\PersonalDevel\playground\WCFBaseDemo\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll" />
+      <DeploymentItem filename="D:\Home\PersonalDevel\playground\WCFBaseDemo\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.dll" />
+      <DeploymentItem filename="D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo\bin\Debug\WCFBaseDemo.exe" />
+      <DeploymentItem filename="D:\Home\PersonalDevel\playground\WCFBaseDemo\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Configuration.dll" />
+      <DeploymentItem filename="D:\Home\PersonalDevel\playground\WCFBaseDemo\packages\Moq.4.0.10827\lib\NET40\Moq.dll" />
+      <DeploymentItem filename="D:\Home\PersonalDevel\playground\WCFBaseDemo\packages\EntityFramework.4.2.0.0\lib\net40\EntityFramework.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-11-09T11:00:08.3512368+01:00" queuing="2011-11-09T11:00:09.9532368+01:00" start="2011-11-09T11:00:09.9872368+01:00" finish="2011-11-09T11:00:21.4502368+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CanProvideInstanceForHost" storage="d:\home\personaldevel\playground\wcfbasedemo\wcfbasedemo.host.tests\bin\debug\wcfbasedemo.host.tests.dll" id="492cd653-140d-b34b-f6ef-ef801551a4d7">
+      <Execution id="fe5456ee-10ef-4146-979e-917eff7911df" />
+      <TestMethod codeBase="D:/Home/PersonalDevel/playground/WCFBaseDemo/WCFBaseDemo.Host.Tests/bin/Debug/WCFBaseDemo.Host.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WCFBaseDemo.Host.Tests.Infrastructure.WCF.UnityServiceBehaviorTest, WCFBaseDemo.Host.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanProvideInstanceForHost" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="492cd653-140d-b34b-f6ef-ef801551a4d7" executionId="fe5456ee-10ef-4146-979e-917eff7911df" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="fe5456ee-10ef-4146-979e-917eff7911df" testId="492cd653-140d-b34b-f6ef-ef801551a4d7" testName="CanProvideInstanceForHost" computerName="WL033766" duration="00:00:11.2112188" startTime="2011-11-09T11:00:10.0002368+01:00" endTime="2011-11-09T11:00:21.4122368+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe5456ee-10ef-4146-979e-917eff7911df">
+    </UnitTestResult>
+  </Results>
+</TestRun>

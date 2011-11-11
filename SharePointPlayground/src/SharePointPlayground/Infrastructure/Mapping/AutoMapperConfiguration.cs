@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 using AutoMapper;
 using AutoMapper.Mappers;
+using Castle.Windsor;
 using Microsoft.SharePoint;
 using SharePointPlayground.Infrastructure.Mapping.Extensions;
 using SharePointPlayground.Infrastructure.Mapping.ObjectMappers;
 using SharePointPlayground.ViewModels;
-using SharePointPlayground.Model;
 
 namespace SharePointPlayground.Infrastructure.Mapping
 {
@@ -22,9 +21,17 @@ namespace SharePointPlayground.Infrastructure.Mapping
 			ConfigureModelMappings();
 		}
 
-		private static void ConfigureModelMappings()
+		public static void AddConfigurationFromContainer(IWindsorContainer container)
 		{
-			Mapper.CreateMap<PostInsertViewModel, Post>();
+			var genericMappers = container.ResolveAll<IGenericMapperMarker>();
+			foreach (var mapperImplementation in genericMappers)
+			{
+				if (Mapper.FindTypeMapFor(mapperImplementation.GetSourceType(), mapperImplementation.GetDestinationType()) == null)
+				{
+					Mapper.CreateMap(mapperImplementation.GetSourceType(), mapperImplementation.GetDestinationType());
+				}
+			}
+			container.Release(genericMappers);
 		}
 
 		private static void ConfigureMapper()
@@ -36,6 +43,11 @@ namespace SharePointPlayground.Infrastructure.Mapping
 
 			var mappersToServe = newMappers.ToArray();
 			MapperRegistry.AllMappers = () => { return mappersToServe; };
+		}
+
+		private static void ConfigureModelMappings()
+		{
+			//Mapper.CreateMap<PostInsertViewModel, Post>();
 		}
 
 		private static void ConfigureListItem()

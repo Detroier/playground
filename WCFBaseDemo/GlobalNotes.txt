@@ -1,0 +1,12 @@
+- Projects should be somehow rearranged
+- This really depends on what we want, but:
+	- Root project
+		- Only real stuff, no unity!
+	- Infrastructure project?
+		- Unity base classes can go here
+	- Host project
+		- references both projects and builds up whole app?
+	- Test
+		- Tests for all 3 projects
+
+=> but, wouldn't we end up with truckload of projects?

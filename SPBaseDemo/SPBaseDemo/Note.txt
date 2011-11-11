@@ -1,0 +1,9 @@
+﻿- Proposed structure for SharePoint projects
+- Infrastructore folder holds classes, that keep everything together [container, HttpModules, etc]
+- Helpers folder holds extensions, attributes, etc
+- Web folder contains custom code, which output is related to web
+	- HttpHandlers
+	- WCF Service definitions
+	- possible base classes for controls, webparts, etc.
+- Commands holds classes, which do some kind of business logic and change state of the application
+- Queries hold all query logic 

@@ -1,0 +1,2 @@
+﻿- Core project of solution
+- All items go here (maybe except WF4 items)

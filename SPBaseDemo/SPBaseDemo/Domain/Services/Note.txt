@@ -1,0 +1,2 @@
+﻿- Domain services go here
+- Domain service = functionality which wraps some business logic

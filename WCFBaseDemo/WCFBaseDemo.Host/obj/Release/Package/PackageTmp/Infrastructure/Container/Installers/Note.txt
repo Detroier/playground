@@ -1,0 +1,2 @@
+﻿- Installers for host should go here
+- That means this project will be configured from and only this place

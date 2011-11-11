@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\inetpub\wwwroot\AppFabric-22221" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="True" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="11/09/2011 18:30:54" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="11/04/2011 13:58:03" />
+    <file relUrl="bin/Microsoft.Practices.ServiceLocation.dll" publishTime="11/04/2011 13:59:29" />
+    <file relUrl="packages.config" publishTime="11/04/2011 14:01:55" />
+    <file relUrl="bin/Microsoft.Practices.ServiceLocation.xml" publishTime="11/04/2011 13:59:29" />
+    <file relUrl="bin/EntityFramework.xml" publishTime="11/04/2011 13:58:03" />
+    <file relUrl="bin/Microsoft.Practices.Unity.Configuration.xml" publishTime="11/04/2011 13:59:29" />
+    <file relUrl="bin/WCFBaseDemo.pdb" publishTime="11/09/2011 18:40:47" />
+    <file relUrl="bin/WCFBaseDemo.Host.dll" publishTime="11/09/2011 18:40:47" />
+    <file relUrl="bin/Microsoft.Practices.Unity.dll" publishTime="11/04/2011 13:59:29" />
+    <file relUrl="bin/Microsoft.Practices.Unity.Configuration.dll" publishTime="11/04/2011 13:59:29" />
+    <file relUrl="Infrastructure/Container/Installers/Note.txt" publishTime="11/04/2011 15:18:05" />
+    <file relUrl="bin/WCFBaseDemo.Host.pdb" publishTime="11/09/2011 18:40:47" />
+    <file relUrl="DummyService.svc" publishTime="11/09/2011 15:43:09" />
+    <file relUrl="Note.txt" publishTime="11/09/2011 16:04:44" />
+    <file relUrl="bin/WCFBaseDemo.dll" publishTime="11/09/2011 18:40:47" />
+    <file relUrl="bin/Microsoft.Practices.Unity.xml" publishTime="11/04/2011 13:59:29" />
+    <file relUrl="bin/Microsoft.Practices.ServiceLocation.pdb" publishTime="11/04/2011 13:59:29" />
+  </publishProfile>
+</publishData>

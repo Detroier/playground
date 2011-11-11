@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="a787324b-e149-4a2a-984d-e1df122a0275" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="EntityFramework.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="Microsoft.Practices.ServiceLocation.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="Microsoft.Practices.Unity.Configuration.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="Microsoft.Practices.Unity.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="SPBaseDemo.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+</Solution>

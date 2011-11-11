@@ -1,15 +1,21 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 using Microsoft.SharePoint;
-using SharePointPlayground.Helpers;
+using SharePointPlayground.Mapping;
 using SharePointPlayground.Queries.SP;
 using SharePointPlayground.ViewModels;
-using System;
 
 namespace SharePointPlayground.Queries
 {
 	public class LastTasksByUserQuery : ILastTasksByUserQuery
 	{
+		private IMapper<DataTable, List<TaskListItemViewModel>> _resultMapper;
+
+		public LastTasksByUserQuery(IMapper<DataTable, List<TaskListItemViewModel>> resultMapper)
+		{
+			_resultMapper = resultMapper;
+		}
+
 		public IEnumerable<TaskListItemViewModel> GetLastTasksForUser(SPSite rootOfSearch, SPUser user, int count)
 		{
 			DataTable dataTable = new SPSiteDataQueryExecutor(
@@ -20,7 +26,7 @@ namespace SharePointPlayground.Queries
 								count).ExecuteQuery(rootOfSearch.RootWeb);
 
 
-			var result = dataTable.MapTo<TaskListItemViewModel>();
+			var result = _resultMapper.Map(dataTable);
 			return result;
 		}
 	}

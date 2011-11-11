@@ -1,0 +1,9 @@
+﻿- Container configuration goes here
+- Configurations folder is scanned for all Inatallators to build up the container
+- ContainerLocator is used to provide instance of container across application
+	- note, that container should be used only in very special places, where object graph should be created
+	- places to use
+		- enry point for HttpHandlers [UnityHttpHandler in this case; custom HttpHandlerFactory if web.config modification isn't an issue; dependencies are injected through constructor]
+		- base classes for WebControls, UserControls, webparts, webpages,.. [Container is used to inject dependencies to properties marked with Dependency attribute, not very elegant, but works]
+		- IInstanceProvider implementation for WCF services [dependencies are injected through constructor]
+

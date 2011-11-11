@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPBaseDemo", "SPBaseDemo\SPBaseDemo.csproj", "{9F7A3F99-0B52-4B77-9A3B-C5D087795AA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPBaseDemo.Tests", "SPBaseDemo.Tests\SPBaseDemo.Tests.csproj", "{34D5E7BA-067C-41EC-984F-7864D1E86124}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F7A3F99-0B52-4B77-9A3B-C5D087795AA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F7A3F99-0B52-4B77-9A3B-C5D087795AA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F7A3F99-0B52-4B77-9A3B-C5D087795AA1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9F7A3F99-0B52-4B77-9A3B-C5D087795AA1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9F7A3F99-0B52-4B77-9A3B-C5D087795AA1}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9F7A3F99-0B52-4B77-9A3B-C5D087795AA1}.Debug|Mixed Platforms.Deploy.0 = Debug|Any CPU
+		{9F7A3F99-0B52-4B77-9A3B-C5D087795AA1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9F7A3F99-0B52-4B77-9A3B-C5D087795AA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F7A3F99-0B52-4B77-9A3B-C5D087795AA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F7A3F99-0B52-4B77-9A3B-C5D087795AA1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{9F7A3F99-0B52-4B77-9A3B-C5D087795AA1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9F7A3F99-0B52-4B77-9A3B-C5D087795AA1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9F7A3F99-0B52-4B77-9A3B-C5D087795AA1}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
+		{9F7A3F99-0B52-4B77-9A3B-C5D087795AA1}.Release|x86.ActiveCfg = Release|Any CPU
+		{34D5E7BA-067C-41EC-984F-7864D1E86124}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{34D5E7BA-067C-41EC-984F-7864D1E86124}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{34D5E7BA-067C-41EC-984F-7864D1E86124}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{34D5E7BA-067C-41EC-984F-7864D1E86124}.Debug|x86.ActiveCfg = Debug|x86
+		{34D5E7BA-067C-41EC-984F-7864D1E86124}.Debug|x86.Build.0 = Debug|x86
+		{34D5E7BA-067C-41EC-984F-7864D1E86124}.Release|Any CPU.ActiveCfg = Release|x86
+		{34D5E7BA-067C-41EC-984F-7864D1E86124}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{34D5E7BA-067C-41EC-984F-7864D1E86124}.Release|Mixed Platforms.Build.0 = Release|x86
+		{34D5E7BA-067C-41EC-984F-7864D1E86124}.Release|x86.ActiveCfg = Release|x86
+		{34D5E7BA-067C-41EC-984F-7864D1E86124}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35
+	EndGlobalSection
+EndGlobal

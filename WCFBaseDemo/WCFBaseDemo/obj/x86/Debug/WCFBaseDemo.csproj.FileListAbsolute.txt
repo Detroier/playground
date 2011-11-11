@@ -1,0 +1,15 @@
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo\bin\Debug\WCFBaseDemo.pdb
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo\obj\x86\Debug\WCFBaseDemo.pdb
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo\bin\Debug\EntityFramework.dll
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo\bin\Debug\EntityFramework.xml
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo\bin\Debug\Microsoft.Practices.Unity.xml
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo\bin\Debug\WCFBaseDemo.dll.config
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo\bin\Debug\WCFBaseDemo.dll
+D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo\obj\x86\Debug\WCFBaseDemo.dll

@@ -126,6 +126,7 @@
     </Compile>
     <Compile Include="Infrastructure\Container\ContainerConfigurator.cs" />
     <Compile Include="Infrastructure\Container\Installers\HttpHandlersInstaller.cs" />
+    <Compile Include="Infrastructure\Container\Installers\MappingInstaller.cs" />
     <Compile Include="Infrastructure\Container\Installers\ServicesInstaller.cs" />
     <Compile Include="Infrastructure\Container\Installers\SPAccesorsInstaller.cs" />
     <Compile Include="Infrastructure\Data\ISessionFactoryProvider.cs" />
@@ -165,6 +166,9 @@
     <Compile Include="Helpers\SharePoint\ICurrentUserAccesor.cs" />
     <Compile Include="Infrastructure\WCF\WindsorInstanceProvider.cs" />
     <Compile Include="Infrastructure\WCF\WindsorServiceBehavior.cs" />
+    <Compile Include="Mapping\GenericMapper.cs" />
+    <Compile Include="Infrastructure\Mapping\IGenericMapperMarker.cs" />
+    <Compile Include="Mapping\IMapper.cs" />
     <Compile Include="Model\Comment.cs" />
     <Compile Include="Model\Post.cs" />
     <Compile Include="Model\PostTag.cs" />

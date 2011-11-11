@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="3bf03479-d680-4ce5-9c7f-9ee532e5a70e" name="poladmar@WL033766 2011-11-09 18:56:30" runUser="EU\poladmar" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="8ade650e-4af8-415d-b3e8-b44d3ce8c4dd">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="poladmar_WL033766 2011-11-09 18_56_30" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-11-09T18:56:30.6984410+01:00" queuing="2011-11-09T18:56:30.7284427+01:00" start="2011-11-09T18:56:30.7394433+01:00" finish="2011-11-09T18:56:31.3414778+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CanInvokeDummyService" storage="d:\home\personaldevel\playground\wcfbasedemo\wcfbasedemo.host.deploymenttests\bin\debug\wcfbasedemo.host.deploymenttests.dll" id="6ecf0c46-d28c-29e9-5077-e81e65ddd2c3">
+      <Execution id="03fc1abb-4369-49df-850a-53dda824fbef" />
+      <TestMethod codeBase="D:/Home/PersonalDevel/playground/WCFBaseDemo/WCFBaseDemo.Host.DeploymentTests/bin/Debug/WCFBaseDemo.Host.DeploymentTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WCFBaseDemo.Host.DeploymentTests.ServicesOnLocalIISTest, WCFBaseDemo.Host.DeploymentTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanInvokeDummyService" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="6ecf0c46-d28c-29e9-5077-e81e65ddd2c3" executionId="03fc1abb-4369-49df-850a-53dda824fbef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="03fc1abb-4369-49df-850a-53dda824fbef" testId="6ecf0c46-d28c-29e9-5077-e81e65ddd2c3" testName="CanInvokeDummyService" computerName="WL033766" duration="00:00:00.3555495" startTime="2011-11-09T18:56:30.7504440+01:00" endTime="2011-11-09T18:56:31.3064758+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="03fc1abb-4369-49df-850a-53dda824fbef">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method WCFBaseDemo.Host.DeploymentTests.ServicesOnLocalIISTest.CanInvokeDummyService threw exception: 
+System.ServiceModel.ServiceActivationException: The requested service, 'http://localhost:22221/DummyService.svc' could not be activated. See the server's diagnostic trace logs for more information.</Message>
+          <StackTrace> 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpChannelUtilities.ValidateRequestReplyResponse(HttpWebRequest request, HttpWebResponse response, HttpChannelFactory factory, WebException responseException, ChannelBinding channelBinding)
+   at System.ServiceModel.Channels.HttpChannelFactory.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData&amp; msgData, Int32 type)
+   at WCFBaseDemo.Host.DeploymentTests.ServiceReferences.IDummyService.SayHello(String toWho)
+   at WCFBaseDemo.Host.DeploymentTests.ServiceReferences.DummyServiceClient.SayHello(String toWho) in D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo.Host.DeploymentTests\Service References\ServiceReferences\Reference.cs:line 50
+   at WCFBaseDemo.Host.DeploymentTests.ServicesOnLocalIISTest.CanInvokeDummyService() in D:\Home\PersonalDevel\playground\WCFBaseDemo\WCFBaseDemo.Host.DeploymentTests\ServicesOnLocalIISTest.cs:line 22
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using SharePointPlayground.Infrastructure.Mapping;
+using SharePointPlayground.Infrastructure.Data;
 
 namespace SharePointPlayground.Infrastructure.HttpModules
 {
@@ -54,7 +55,12 @@ namespace SharePointPlayground.Infrastructure.HttpModules
 		private static void InitializeStatics()
 		{
 			Container.ContainerHelper.InitializeHelper();
+
+			//taken out of container helper
+			HttpContext.Current.Application[SessionFactoryProvider.Key] = Container.ContainerHelper.Kernel.Resolve<ISessionFactoryProvider>();
+
 			AutoMapperConfiguration.Configure();
+			AutoMapperConfiguration.AddConfigurationFromContainer(Container.ContainerHelper.Kernel);
 		}
 	}
 }
